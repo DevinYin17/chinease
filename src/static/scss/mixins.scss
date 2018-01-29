@@ -1,0 +1,22 @@
+@mixin background-contain {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin background-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin text-el {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin uc-text-center {
+  display: flex;
+  justify-content: center;
+}

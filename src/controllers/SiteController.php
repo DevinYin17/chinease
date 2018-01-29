@@ -1,58 +1,25 @@
 <?php
-
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
+use yii\web\View;
 use yii\web\Controller;
-use yii\web\Response;
+use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
+use yii\helpers\Json;
+use yii\helpers\Url;
+use app\behaviors\CaptchaBehavior;
+use app\utils\LanguageUtil;
+use app\utils\UrlUtil;
+use app\models\User;
+use app\models\Validation;
+use app\models\Account;
 
 class SiteController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
 
-    /**
-     * @inheritdoc
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
+    const DEFAULT_DESCRIPTION = 'chinease';
+    const DEFAULT_KEYWORDS = 'chinease';
 
     /**
      * Displays homepage.
@@ -61,66 +28,86 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->renderPage('index', '/build/script/index.js');
     }
 
     /**
-     * Login action.
-     *
-     * @return Response|string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
-
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Displays about page.
+     * Displays signup page.
      *
      * @return string
      */
-    public function actionAbout()
+    public function actionLogin()
     {
-        return $this->render('about');
+        $description = 'login';
+        $keywords = 'login';
+        $title = 'Loign';
+        return $this->renderPage('login', '/build/script/login.js', $description, $keywords, $title);
+    }
+
+    /**
+     * Displays error page.
+     *
+     * @return string
+     */
+    public function actionError()
+    {
+        return $this->render('error', ['domain' => DOMAIN]);
+    }
+
+    private function renderPage($page, $jsFile = '', $descriptionCus = '', $keywordsCus = '', $titleCus = '', $params = [])
+    {
+        $js = null;
+        $injectedFiles =[];
+        $injectedFilesHead =[];
+        $isMobileBrowser = $this->isMobileBrowser();
+        $injectedFiles[] = '/build/script/vendor.js';
+
+        if (!empty($jsFile)) {
+            $injectedFiles[] = $jsFile;
+        }
+        $this->view->registerJs($js, View::POS_HEAD);
+        foreach ($injectedFiles as $file) {
+            $this->view->registerJsFile($file, ['position' => View::POS_END]);
+        }
+
+        foreach ($injectedFilesHead as $file) {
+            $this->view->registerJsFile($file, ['position' => View::POS_HEAD]);
+        }
+
+        $description = self::DEFAULT_DESCRIPTION;
+        $keywords = self::DEFAULT_KEYWORDS;
+        $title = 'Chinease';
+        if (!empty($descriptionCus)) {
+            $description = $descriptionCus;
+        }
+        if (!empty($keywordsCus)) {
+            $keywords = $keywordsCus;
+        }
+        if (!empty($titleCus)) {
+            $title = $titleCus;
+        }
+        $this->view->registerMetaTag(['name' => 'keywords', 'content' => $keywords]);
+        $this->view->registerMetaTag(['name' => 'description', 'content' => $description]);
+        $this->view->title = $title;
+        $this->view->params = array_merge(['isMobileBrowser' => $isMobileBrowser], $params);
+
+        return $this->render($page);
+    }
+
+    private function isMobileBrowser()
+    {
+      if (isset($_SERVER['HTTP_USER_AGENT'])) {
+          $userAgent = strtolower($_SERVER['HTTP_USER_AGENT']);
+          $clientkeywords = array(
+              'nokia', 'sony', 'ericsson', 'mot', 'samsung', 'htc', 'sgh', 'lg', 'sharp', 'sie-'
+              ,'philips', 'panasonic', 'alcatel', 'lenovo', 'iphone', 'ipod', 'blackberry', 'meizu',
+              'android', 'netfront', 'symbian', 'ucweb', 'windowsce', 'palm', 'operamini',
+              'operamobi', 'opera mobi', 'openwave', 'nexusone', 'cldc', 'midp', 'wap', 'mobile'
+          );
+          if (preg_match("/(".implode('|', $clientkeywords).")/i", $userAgent)) {
+              return true;
+          }
+      }
+      return false;
     }
 }

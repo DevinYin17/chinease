@@ -28,3 +28,10 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
+
+.sass-cache
+node_modules
+
+# build files
+web/build
+
