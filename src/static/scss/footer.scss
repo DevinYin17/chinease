@@ -1,3 +1,15 @@
 footer {
-  font-size: 12px;
+  flex-shrink: 0;
+  height: 70px;
+  background-color: #0D0F10;
+
+  .license {
+    font-size: 18px;
+    line-height: 70px;
+    color: $white;
+
+    a {
+      color: $white;
+    }
+  }
 }

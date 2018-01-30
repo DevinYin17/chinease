@@ -1,7 +1,62 @@
 header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 10;
+  flex-shrink: 0;
+  position: relative;
+  height: 450px;
+  background-image: url('/build/images/header/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  h1 {
+    padding-top: 140px;
+    font-size: 62px;
+    line-height: 1;
+    color: $white;
+  }
+
+  h2 {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 15px 0;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+    color: #bbb;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+  }
+
+  nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 77px;
+    background-color: rgba(255, 255, 255, .15);
+    border-top: 1px solid rgba(255, 255, 255, .2);
+  }
+
+  .menu {
+    font-size: 0;
+  }
+
+  .menu-item {
+    display: inline-block;
+    line-height: 77px;
+    padding: 0 20px;
+    font-size: 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+
+    a {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: rgba(239, 153, 127, .4);
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
 }

@@ -34,19 +34,52 @@ use yii\helpers\Url;
 
 <body class="<?php if (Yii::$app->request->getPathInfo() == '') { echo 'home-page-wrapper'; } ?>">
     <header>
-        header -
-        <?php echo Yii::$app->request->getPathInfo(); ?>
+        <h1>Chinease</h1>
+        <h2>Employment and relocation link for English language teachers looking to work in China</h2>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="/home">HOME</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/job">JOB VACANCY</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/process">APPLICATION PROCESS</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/china">DISCOVER CHINA</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/contact">CONTACT US</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/signin">SIGNIN</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/signup">SIGNUP</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <?php $this->beginBody() ?>
-    <?= $content ?>
+    <main>
+        <?php echo Yii::$app->request->getPathInfo(); ?>
+
+        <?php $this->beginBody() ?>
+        <?= $content ?>
+    </main>
+
 
     <section class="fixed-wrapper">
         fixed
     </section>
 
     <footer>
-        footer
+        <div class="container license">
+            ©2017 -
+            <a href="/">Chinease Ltd</a>
+        </div>
     </footer>
     <?php $this->endBody() ?>
 </body>
