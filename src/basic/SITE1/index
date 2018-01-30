@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/styles">
+    <script src="js/index"></script>
+</head>
+
+<body>
+
+    <ul id="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Job vacancy</a></li>
+        <li><a href="#">Application</a></li>
+        <li><a href="#">Discover China</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Sign Up</a></li>
+    </ul>
+
+    <ul id="sidebar">
+        <li><a href="#">Share</a></li>
+    </ul>
+
+    <div class="introduction">
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+        <p>Company Information</p>
+    </div>
+
+    <div class="project">
+        <div>project_1</div>
+        <div>project_2</div>
+        <div>project_3</div>
+    </div>
+
+    <div class="process">
+        <div>process.jpg</div>
+    </div>
+
+    <div class="video">
+        <video width="320" height="240" controls>
+  <source src="src/movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="article">
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+        <p>Article</p>
+    </div>
+
+    <div class="contact">Contact</div>
+
+    <div class="bottom">Chinease</div>
+
+</body>
+
+</html>
