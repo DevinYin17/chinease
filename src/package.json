@@ -36,7 +36,7 @@
   "dependencies": {
     "fullpage.js": "2.8.2",
     "inobounce": "git://github.com/frontnode/iNoBounce.git",
-    "jquery": "1.11.2",
+    "jquery": "3.0.0",
     "js-base64": "2.1.9",
     "lib.flexible": "git://github.com/frontnode/lib-flexible.git",
     "mobile-detect": "1.3.2",
