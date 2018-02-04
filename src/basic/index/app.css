@@ -126,5 +126,9 @@ li {
   opacity: 0; }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; }
+
+  body {
+    background-color: #fafafa;
+  }
