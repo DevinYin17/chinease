@@ -1,0 +1,7 @@
+nav {
+  position: fixed;
+}
+
+nav li {
+  display: inline-block;
+}
