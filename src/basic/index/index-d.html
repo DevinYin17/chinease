@@ -4,6 +4,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="swiper-4.1.0.min.css">
     <link rel="stylesheet" href="index-d.css">
     <link rel="stylesheet" href="index-i.css">
   </head>
@@ -33,7 +34,7 @@
     </nav>
 
     <div id="fullpage">
-      <section class="section page-one">
+      <!-- <section class="section page-one">
         <div class="top">
           <img class="logo" src="images/logo.jpg"/>
           <div class="text-center">
@@ -145,11 +146,53 @@
             </article>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section page-four">
-        <div class="container">
-          page-four
+        <div class="swiper-container schools">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <i class="logo rise"></i>
+              <span class="name">Rise</span>
+            </div>
+            <div class="swiper-slide">
+              <i class="logo webi"></i>
+              <span class="name">Webi</span>
+            </div>
+            <div class="swiper-slide">
+              <i class="logo huaihai"></i>
+              <span class="name">Huaihai</span>
+            </div>
+            <div class="swiper-slide">
+              <i class="logo rise"></i>
+              <span class="name">Rise</span>
+            </div>
+            <div class="swiper-slide">
+              <i class="logo webi"></i>
+              <span class="name">Webi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="video">
+            <video width="500px" controls>
+              <source src="images/movie.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="swiper-container cities">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide city_1"></div>
+              <div class="swiper-slide city_2"></div>
+              <div class="swiper-slide city_3"></div>
+              <div class="swiper-slide city_4"></div>
+              <div class="swiper-slide city_5"></div>
+              <div class="swiper-slide city_6"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
 
@@ -161,6 +204,7 @@
     </div>
 
     <script src="vendor.js"></script>
+    <script src="swiper-4.1.0.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>

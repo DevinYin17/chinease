@@ -253,3 +253,97 @@ nav .social .faq {
 .page-three .bottom article:first-child h2 {
   padding: 0 10px;
 }
+
+.page-four .fp-tableCell {
+  position: relative;
+}
+
+.page-four .content {
+  height: 100%;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-four .schools {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ebebeb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+}
+
+.page-four .schools .swiper-slide {
+  height: 100px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.page-four .schools .logo {
+  flex-grow: 2;
+  flex-shrink: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+}
+
+.page-four .schools .logo.rise {
+  background-image: url('images/Rise_Logo.png');
+}
+
+.page-four .schools .logo.webi {
+  background-image: url('images/webi_Logo.png');
+}
+
+.page-four .schools .logo.huaihai {
+  background-image: url('images/Huaihai Institute of Technology_Logo.png');
+}
+
+.page-four .schools .name {
+  flex-grow: 3;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.page-four .content .video {
+  margin-right: 100px;
+}
+
+.page-four .cities {
+  width: 40%;
+  margin: 0;
+  height: 60%;
+}
+
+.page-four .cities .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.page-four .city_1 {
+  background-image: url('images/city_1.jpg');
+}
+
+.page-four .city_2 {
+  background-image: url('images/city_2.jpg');
+}
+
+.page-four .city_3 {
+  background-image: url('images/city_3.jpg');
+}
+
+.page-four .city_4 {
+  background-image: url('images/city_4.jpg');
+}
+
+.page-four .city_5 {
+  background-image: url('images/city_5.jpg');
+}
+
+.page-four .city_6 {
+  background-image: url('images/city_6.jpg');
+}
