@@ -251,7 +251,50 @@ nav .social .faq {
 }
 
 .page-three .bottom article:first-child h2 {
-  padding: 0 10px;
+  padding: 0;
+}
+
+.page-one-2 {
+  position: relative;
+  color: #fff;
+  background-image: url('images/shanghai.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.page-one-2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-one-2 .fp-tableCell {
+  position: relative;
+  z-index: 1;
+}
+
+.page-one-2 h3 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.page-one-2 h2 {
+  font-size: 50px;
+  padding: 30px 0;
+}
+
+.page-one-2 h3:first-child {
+  padding-top: 10%;
+}
+
+.page-one-2 p {
+  max-width: 800px;
+  margin: 0 auto .5em;
+  font-size: 20px;
 }
 
 .page-four .fp-tableCell {
