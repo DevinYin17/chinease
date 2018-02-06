@@ -390,3 +390,28 @@ nav .social .faq {
 .page-four .city_6 {
   background-image: url('images/city_6.jpg');
 }
+
+.page-five .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.page-five .map {
+  flex-shrink: 0;
+  width: 500px;
+  height: 500px;
+  margin-right: 50px;
+  background-color: yellow;
+}
+
+.page-five .contact {
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-left: 1px solid #efefef;
+  padding: 50px;
+}
+
+.page-five h2 {
+  margin-bottom: 50px;
+}
