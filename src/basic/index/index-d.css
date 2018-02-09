@@ -157,33 +157,34 @@ nav .social .faq {
   border-radius: 50%;
 }
 
-.page-one .bottom {
+.page-two .fp-tableCell {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 3;
   padding: 0 20%;
   background-color: rgba(0, 66, 102, .75);
   color: #fff;
 }
 
-.page-one .bottom h2 {
-  margin-bottom: 20px;
+.page-two h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
 }
 
-.page-one .bottom p {
+.page-two p {
+  font-size: 22px;
   margin-bottom: 1em;
   text-align: left;
 }
 
-.page-two ul {
+.page-one .bottom {
   display: flex;
+  flex-grow: 3;
   align-items: center;
   justify-content: space-around;
-  height: 100%;
 }
 
-.page-two li {
+.page-one .bottom li {
   position: relative;
   display: inline-block;
   width: 350px;
@@ -195,38 +196,41 @@ nav .social .faq {
   background-color: #fff;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
-.page-two li:hover {
+.page-one .bottom li:hover {
   box-shadow: 0 5px 10px #000;
 }
 
-.page-two li.internship {
+.page-one .bottom li.internship {
   background-image: url('images/internship.jpg');
 }
 
-.page-two li.graduate {
+.page-one .bottom li.graduate {
   background-image: url('images/graduate.png');
 }
 
-.page-two li.social {
+.page-one .bottom li.social {
   background-image: url('images/social.png');
 }
 
-.page-two li:hover span {
-  margin-top: 30px;
+.page-one .bottom li:hover span {
+  top: 0;
 }
 
-.page-two li span {
+.page-one .bottom li span {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  margin-top: -70px;
+  height: 100%;
   font-size: 28px;
+  line-height: 350px;
   text-align: center;
-  transition: all .3s ease;
-  z-index: -1;
+  background-color: #fff;
+  transition: all .5s ease;
+  z-index: 1;
 }
 
 .page-three {
@@ -311,17 +315,13 @@ nav .social .faq {
   padding: 18% 0 50px;
 }
 
-
 .page-four .fp-tableCell {
   position: relative;
 }
 
-.page-four .content {
+.page-four .job-list {
   height: 100%;
   padding-top: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .page-four .schools {
@@ -372,42 +372,48 @@ nav .social .faq {
   font-size: 20px;
 }
 
-.page-four .content .video {
+.page-four-2 .fp-tableCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-four-2 .video {
   margin-right: 100px;
 }
 
-.page-four .cities {
+.page-four-2 .cities {
   width: 40%;
   margin: 0;
   height: 60%;
 }
 
-.page-four .cities .swiper-slide {
+.page-four-2 .cities .swiper-slide {
   background-size: cover;
   background-position: center;
 }
 
-.page-four .city_1 {
+.page-four-2 .city_1 {
   background-image: url('images/city_1.jpg');
 }
 
-.page-four .city_2 {
+.page-four-2 .city_2 {
   background-image: url('images/city_2.jpg');
 }
 
-.page-four .city_3 {
+.page-four-2 .city_3 {
   background-image: url('images/city_3.jpg');
 }
 
-.page-four .city_4 {
+.page-four-2 .city_4 {
   background-image: url('images/city_4.jpg');
 }
 
-.page-four .city_5 {
+.page-four-2 .city_5 {
   background-image: url('images/city_5.jpg');
 }
 
-.page-four .city_6 {
+.page-four-2 .city_6 {
   background-image: url('images/city_6.jpg');
 }
 
