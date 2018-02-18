@@ -104,32 +104,35 @@ nav .social a {
   display: block;
   width: 30px;
   height: 30px;
-  margin: auto;
+  margin: 10px auto 0;
   background-size: cover;
   background-position: center;
   transition: all .2s ease;
 }
 
-nav .social .facebook:hover,
-nav .social .twitter:hover {
+nav .social a:hover {
   transform: scale(1.2);
 }
 
 nav .social .facebook {
+  margin-top: 0;
   background-image: url('images/facebook.png');
 }
 
 nav .social .twitter {
-  margin-top: 10px;
   background-image: url('images/twitter.png');
 }
 
+nav .social .instagram {
+  background-image: url('images/ins.png');
+}
+
 nav .social .faq {
-  display: block;
-  margin-top: 5px;
-  padding-top: 5px;
-  border-top: 1px solid #ebebeb;
-  cursor: pointer;
+  background-image: url('images/faq.jpg');
+}
+
+nav .social .contact {
+  background-image: url('images/contactus.png');
 }
 
 .page-one .fp-tableCell {
@@ -444,38 +447,54 @@ nav .social .faq {
 }
 
 .page-four-2 .cities {
-  width: 40%;
+  width: 50%;
   margin: 0;
-  height: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.page-four-2 .cities .swiper-slide {
+.page-four-2 .cities article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-four-2 .cities .content {
+  width: 30%;
+  height: 248px;
+  overflow: -webkit-paged-y;
+}
+
+.page-four-2 .cities .cover {
+  width: 65%;
+  height: 250px;
   background-size: cover;
   background-position: center;
 }
 
-.page-four-2 .city_1 {
-  background-image: url('images/city_1.jpg');
+.page-four-2 .cities article:nth-child(1) .cover {
+  background-image: url(images/food.jpeg);
 }
 
-.page-four-2 .city_2 {
-  background-image: url('images/city_2.jpg');
+.page-four-2 .cities article:nth-child(2) .cover {
+  background-image: url(images/living.jpg);
 }
 
-.page-four-2 .city_3 {
-  background-image: url('images/city_3.jpg');
+.page-four-2 .cities .type {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
 }
 
-.page-four-2 .city_4 {
-  background-image: url('images/city_4.jpg');
+.page-four-2 .cities .title {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-.page-four-2 .city_5 {
-  background-image: url('images/city_5.jpg');
-}
-
-.page-four-2 .city_6 {
-  background-image: url('images/city_6.jpg');
+.page-four-2 .cities p {
+  font-size: 14px;
 }
 
 .page-five .container {

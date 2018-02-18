@@ -3,6 +3,7 @@
   <head>
     <title>Home Page</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="swiper-4.1.0.min.css">
     <link rel="stylesheet" href="index-d.css">
@@ -29,7 +30,9 @@
       <div class="social text-center">
         <a class="facebook" href="#"></a>
         <a class="twitter" href="#"></a>
-        <span class="faq glyphicon glyphicon-book" data-toggle="tooltip" data-placement="right" title="FaQ"></span>
+        <a class="instagram" href="#"></a>
+        <a class="faq" href="javascript:void(0)"></a>
+        <a class="contact" href="javascript:void(0)" data-toggle="modal" data-target="#contactus"></a>
       </div>
     </nav>
 
@@ -49,13 +52,13 @@
         </div>
         <ul class="bottom container">
           <li class="internship">
-            <span>Internship</span>
+            <span>Social Vacancy</span>
           </li>
           <li class="graduate">
             <span>Graduate Scheme</span>
           </li>
           <li class="social">
-            <span>Social Recruitment</span>
+            <span>Internship</span>
           </li>
         </ul>
       </section>
@@ -182,7 +185,7 @@
             <i class="logo"></i>
             <div class="desc">
               <label class="name">ENGLISH TEACHER</label>
-              <span class="info time">Full Time</span>
+              <span class="info glyphicon glyphicon-tags">Full Time</span>
               <span class="info salary">12,000 - 24,000</span>
               <span class="info location">China - Shanghai</span>
             </div>
@@ -229,15 +232,23 @@
         </div>
 
         <div class="swiper-container cities">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide city_1"></div>
-            <div class="swiper-slide city_2"></div>
-            <div class="swiper-slide city_3"></div>
-            <div class="swiper-slide city_4"></div>
-            <div class="swiper-slide city_5"></div>
-            <div class="swiper-slide city_6"></div>
-          </div>
-          <div class="swiper-pagination"></div>
+          <article>
+            <i class="cover"></i>
+            <div class="content">
+              <label class="type">Product / Service Categories</label>
+              <label class="title">Chiese Food</label>
+              <p>China is rich in tourist attractions. Delicious foods are an attraction indispensable in a good tour. With a long history, unique features, numerous styles and exquisite cooking, Chinese cuisine is one important constituent part of Chinese culture. Chinese dishes are famous for color, aroma, taste, meaning and appearance.</p>
+            </div>
+          </article>
+
+          <article>
+            <div class="content">
+              <label class="type">Shopping in China</label>
+              <label class="title">Online shopping</label>
+              <p>Ecommerce was not invented in China, but some might say it was perfected in China. With a massive online population of 751 million, China has the world’s biggest and fast-growing ecommerce market, with sales reaching $752 billion in 2016, accounting for roughly 13.8 percent of the country’s total retail sales.</p>
+            </div>
+            <i class="cover"></i>
+          </article>
         </div>
       </section>
 
@@ -266,10 +277,42 @@
       </section>
     </div>
 
+    <div class="modal fade" id="contactus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+          </div>
+          <div class="modal-body">
+            <form class="contact">
+              <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" placeholder="Name" />
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea class="form-control" placeholder="Message"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIjN6O9bD4AfcYKxRRiVCeP_iz0oTQkcQ&callback=myMap"></script>
     <script src="vendor.js"></script>
     <script src="swiper-4.1.0.min.js"></script>
     <script src="bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"> -->
     <script src="index.js"></script>
   </body>
 </html>

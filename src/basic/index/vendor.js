@@ -13195,10 +13195,10 @@ $(function() {
     imageSimpleLazyLoad();
     bindHelpdeskEvent();
     bindRegisterEvent();
-    fetchNews();
+    // fetchNews();
   }
 
-  init();
+  // init();
 });
 
 function getQueryString(name) {
