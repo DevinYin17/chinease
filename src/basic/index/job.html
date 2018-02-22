@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Vacancy</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="swiper-4.1.0.min.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index-d.css">
+    <link rel="stylesheet" href="job.css">
+  </head>
+  <body>
+    <nav>
+      <ul class="text-center menu-list">
+        <li class="menu-item">Home</li>
+        <li class="active menu-item">
+          Job Vacancy
+          <ul class="sub-menu-list">
+            <li class="sub-menu-item">internship</li>
+            <li class="sub-menu-item">graduate scheme</li>
+            <li class="sub-menu-item">social recruitment</li>
+          </ul>
+        </li>
+        <li class="menu-item">Application Process</li>
+        <li class="menu-item">Discover China</li>
+        <li class="menu-item">Contact Us</li>
+        <li class="menu-btn">Sign Up/Login</li>
+      </ul>
+
+      <div class="social text-center">
+        <a class="facebook" href="#"></a>
+        <a class="twitter" href="#"></a>
+        <a class="instagram" href="#"></a>
+        <a class="faq" href="javascript:void(0)"></a>
+        <a class="contact" href="javascript:void(0)" data-toggle="modal" data-target="#contactus"></a>
+      </div>
+    </nav>
+
+    <div id="fullpage" class="job-vacancy-wrapper">
+      <section class="section page-one">
+        <div class="content">
+          <div class="form-inline">
+            <div class="dropdown form-group">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                Type
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Current Vacancy</a></li>
+                <li><a href="#">Graduate Schemes</a></li>
+                <li><a href="#">Internship</a></li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Catagory">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="City">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+
+          <ul class="job-analytic">
+            <li class="analytic-item">
+              <span class="count">37</span>
+              <label class="name">Jobs</label>
+            </li>
+            <li class="analytic-item">
+              <span class="count">20</span>
+              <label class="name">Beijing</label>
+            </li>
+            <li class="analytic-item">
+              <span class="count">12</span>
+              <label class="name">Shanghai</label>
+            </li>
+            <li class="analytic-item">
+              <span class="count">5</span>
+              <label class="name">Jiangsu</label>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section page-two">
+        <ul class="type-list">
+          <a class="type-item" href="job-list.html">
+            <span>Social Vacancy</span>
+          </a>
+          <a class="type-item">
+            <span>Graduate Scheme</span>
+          </a>
+          <a class="type-item">
+            <span>Internship</span>
+          </a>
+        </ul>
+      </section>
+
+      <section class="section page-three">
+        <ul class="job-list container">
+          <li class="job-item">
+            <i class="logo"></i>
+            <div class="desc">
+              <label class="name">ENGLISH TEACHER</label>
+              <span class="info glyphicon glyphicon-time">Full Time</span>
+              <span class="info glyphicon glyphicon-yen">12,000 - 24,000</span>
+              <span class="info glyphicon glyphicon-map-marker">China - Shanghai</span>
+            </div>
+          </li>
+
+          <li class="job-item">
+            <i class="logo"></i>
+            <div class="desc">
+              <label class="name">Teach in the Ancient City of China</label>
+              <span class="info glyphicon glyphicon-time">Full Time</span>
+              <span class="info glyphicon glyphicon-yen">12,000 - 24,000</span>
+              <span class="info glyphicon glyphicon-map-marker">China - Shanghai</span>
+            </div>
+          </li>
+
+          <li class="job-item">
+            <i class="logo"></i>
+            <div class="desc">
+              <label class="name">ESL Foreign Teacher</label>
+              <span class="info glyphicon glyphicon-time">Full Time</span>
+              <span class="info glyphicon glyphicon-yen">12,000 - 24,000</span>
+              <span class="info glyphicon glyphicon-map-marker">China - Tianjin, Shijiazhuang, Taiyuan</span>
+            </div>
+          </li>
+
+          <li class="job-item">
+            <i class="logo"></i>
+            <div class="desc">
+              <label class="name">Online teachers</label>
+              <span class="info glyphicon glyphicon-time">Full Time</span>
+              <span class="info glyphicon glyphicon-yen">12,000 - 24,000</span>
+              <span class="info glyphicon glyphicon-map-marker">China - Shanghai</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <script src="vendor.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

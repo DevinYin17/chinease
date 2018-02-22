@@ -1,0 +1,129 @@
+.job-vacancy-wrapper .page-one {
+  position: relative;
+  background-image: url('images/shanghai2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.job-vacancy-wrapper .page-one::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.job-vacancy-wrapper .page-one .content {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  z-index: 2;
+}
+
+.job-vacancy-wrapper .page-one .btn,
+.job-vacancy-wrapper .page-one .form-control {
+  height: auto;
+  margin-right: 10px;
+  padding: 20px 30px;
+  font-size: 20px;
+  line-height: 1.1;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.job-vacancy-wrapper .page-one .dropdown-toggle {
+  width: 250px;
+}
+
+.job-vacancy-wrapper .page-one .btn-primary {
+  background-color: rgba(9, 125, 165, .75);
+}
+
+.job-vacancy-wrapper .page-one .job-analytic {
+  display: inline-block;
+  margin-top: 50px;
+  border-top: 1px solid #fff;
+  font-size: 0;
+}
+
+.job-vacancy-wrapper .page-one .analytic-item {
+  display: inline-block;
+  padding: 0 80px;
+  margin-top: 20px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.job-vacancy-wrapper .page-one .job-analytic .count {
+  display: block;
+  font-size: 60px;
+  text-align: center;
+}
+
+.job-vacancy-wrapper .page-one .job-analytic .name {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.job-vacancy-wrapper .page-two .type-list {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.job-vacancy-wrapper .page-two .type-item {
+  position: relative;
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  margin-right: 50px;
+  border-radius: 50%;
+  border: 3px solid #555;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.job-vacancy-wrapper .page-two .type-item:hover {
+  box-shadow: 0 5px 10px #000;
+}
+
+.job-vacancy-wrapper .page-two .type-item:nth-child(1) {
+  background-image: url('images/internship.jpg');
+}
+
+.job-vacancy-wrapper .page-two .type-item:nth-child(2) {
+  background-image: url('images/graduate.png');
+}
+
+.job-vacancy-wrapper .page-two .type-item:nth-child(3) {
+  background-image: url('images/social.png');
+}
+
+.job-vacancy-wrapper .page-two .type-item:hover span {
+  top: 0;
+}
+
+.job-vacancy-wrapper .page-two .type-item span {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  font-size: 28px;
+  line-height: 350px;
+  text-align: center;
+  background-color: #fff;
+  transition: all .5s ease;
+  z-index: 1;
+}
