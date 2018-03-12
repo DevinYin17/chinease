@@ -1,15 +1,54 @@
 footer {
-  flex-shrink: 0;
-  height: 70px;
-  background-color: #0D0F10;
+  text-align: center;
+  background-color: $dark;
+  font-size: 14px;
+  line-height: 1;
+  color: $white;
+
+  .tip {
+    margin-top: 80px;
+  }
 
   .license {
-    font-size: 18px;
-    line-height: 70px;
-    color: $white;
+    margin-bottom: 70px;
 
     a {
       color: $white;
+    }
+  }
+
+  .attention-list {
+    display: inline-block;
+    margin: 40px 0 80px;
+  }
+
+  .attention-item {
+    display: inline-block;
+
+    &:nth-child(1) a {
+      background-image: url('/build/images/footer/email.png');
+    }
+
+    &:nth-child(2) a {
+      background-image: url('/build/images/footer/facebook.png');
+    }
+
+    &:nth-child(3) a {
+      background-image: url('/build/images/footer/twitter.png');
+    }
+
+    &:nth-child(4) a {
+      background-image: url('/build/images/footer/instagram.png');
+    }
+
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin: 0 12px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 }

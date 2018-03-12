@@ -1,62 +1,97 @@
 header {
-  flex-shrink: 0;
-  position: relative;
-  height: 450px;
-  background-image: url('/build/images/header/banner.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background-color: $dark;
+  z-index: 1;
 
-  h1 {
-    padding-top: 140px;
-    font-size: 62px;
-    line-height: 1;
-    color: $white;
-  }
-
-  h2 {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 15px 15px 0;
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 1;
-    color: #bbb;
-    border-top: 1px solid rgba(255, 255, 255, .2);
-  }
-
-  nav {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 77px;
-    background-color: rgba(255, 255, 255, .15);
-    border-top: 1px solid rgba(255, 255, 255, .2);
+  .container {
+    height: 70px;
+    background-image: url('/build/images/header/logo.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 45px;
   }
 
   .menu {
     font-size: 0;
+    float: right;
+
+    .menu-item {
+      position: relative;
+      display: inline-block;
+      padding: 0 15px;
+      font-size: 16px;
+      line-height: 70px;
+      cursor: pointer;
+      background-color: $dark;
+
+      a {
+        display: block;
+        height: 100%;
+        color: $white;
+      }
+
+      &.active,
+      &:hover {
+        a {
+          color: $light;
+        }
+      }
+
+      &.login-btn {
+        margin-left: 80px;
+        margin-top: 16px;
+        padding: 10px 15px;
+        line-height: 1;
+        border: 1px solid $light;
+        // background-color: $white;
+
+        a {
+          color: $light;
+        }
+
+        &:hover {
+          background-color: $light;
+
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
   }
 
-  .menu-item {
-    display: inline-block;
-    line-height: 77px;
-    padding: 0 20px;
-    font-size: 16px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-
-    a {
-      color: $white;
+  .sub-menu:hover {
+    .sub-menu-list {
+      bottom: -120px;
     }
+  }
 
-    &:hover {
-      background-color: rgba(239, 153, 127, .4);
-    }
+  .sub-menu-list {
+    position: absolute;
+    height: 120px;
+    width: 200px;
+    left: 0;
+    bottom: 0;
+    background-color: $dark;
+    z-index: -1;
+    transition: bottom .5s ease;
 
-    &:last-child {
-      border-right: none;
+    .sub-menu-item {
+      a {
+        display: block;
+        padding: 0 15px;
+        font-size: 16px;
+        line-height: 40px;
+        color: $white !important;
+      }
+
+      &:hover {
+        a {
+          color: $light !important;
+        }
+      }
     }
   }
 }

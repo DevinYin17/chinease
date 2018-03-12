@@ -31,6 +31,31 @@ class SiteController extends Controller
         return $this->renderPage('index', '/build/script/index.js');
     }
 
+    public function actionContactus()
+    {
+        return $this->renderPage('contactus', '/build/script/contactus.js');
+    }
+
+    public function actionApplicationprocess()
+    {
+        return $this->renderPage('applicationprocess');
+    }
+
+    public function actionDiscoverchina()
+    {
+        return $this->renderPage('discoverchina');
+    }
+
+    public function actionJobvacancy()
+    {
+        return $this->renderPage('jobvacancy');
+    }
+
+    public function actionJob()
+    {
+        return $this->renderPage('job');
+    }
+
     /**
      * Displays signup page.
      *

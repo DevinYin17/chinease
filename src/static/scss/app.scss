@@ -4,6 +4,11 @@
 @import "footer";
 @import "index";
 @import "login";
+@import "contactus";
+@import "applicationprocess";
+@import "discoverchina";
+@import "jobvacancy";
+@import "job";
 
 html {
   font-family: 'Oswald', sans-serif !important;
@@ -35,6 +40,7 @@ body {
   }
 
   main {
+    font-size: 0;
     flex-grow: 1;
     background-color: #f9f6f5;
   }
@@ -70,6 +76,122 @@ li {
 }
 
 .container {
-  width: 1170px;
+  width: 1200px;
   margin: 0 auto;
+}
+
+.cus-input {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: #d4dce0;
+  line-height: 38px;
+  width: 180px;
+  padding: 0 15px;
+  background-color: transparent;
+  border: 1px solid #d4dce0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.cus-btn {
+  display: inline-block;
+  font-size: 16px;
+  color: #d4dce0;
+  line-height: 38px;
+  padding: 0 15px;
+  background-color: $light;
+  cursor: pointer;
+}
+
+.job-container {
+  padding: 60px 0 100px;
+
+  h2 {
+    font-size: 30px;
+    color: #eefdff;
+  }
+
+  .cus-input {
+    width: 110px;
+    margin-right: 10px;
+  }
+
+  .header-tip {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+    .text {
+      flex: 1;
+      font-size: 14px;
+      padding-right: 30px;
+      color: #eefdff;
+    }
+
+    .btn-right {
+      flex-shrink: 0;
+    }
+  }
+
+  .job-list {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+
+    .job-item {
+      width: 274px;
+      background-color: #124973;
+      text-align: center;
+      border: 1px solid #e1e1e1;
+      cursor: pointer;
+      margin-bottom: 32px;
+
+      &:hover {
+        box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+      }
+
+      .logo {
+        display: block;
+        height: 156px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &.job1 {
+          background-image: url('/build/images/jobvacancy/1.png');
+        }
+
+        &.job2 {
+          background-image: url('/build/images/jobvacancy/2.png');
+        }
+
+        &.job3 {
+          background-image: url('/build/images/jobvacancy/3.png');
+        }
+
+        &.job4 {
+          background-image: url('/build/images/jobvacancy/4.png');
+        }
+      }
+
+      .desc {
+        display: block;
+        height: 200px;
+        padding: 40px 30px 20px;
+        font-size: 16px;
+        color: #eefdff;
+      }
+
+      .name {
+        display: block;
+        height: 60px;
+      }
+
+      .info {
+        display: block;
+        padding: 5px;
+      }
+    }
+  }
 }

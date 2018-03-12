@@ -1,7 +1,373 @@
-.index-wrapper {
-  font-size: 12px;
+.index-wrapper .page-one-2 {
+  position: relative;
+  color: #fff;
+  background-image: url('/build/images/index/banner.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-.fixed-wrapper {
-  position: fixed;
+.index-wrapper .page-one-2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.index-wrapper .page-one-2 .fp-tableCell {
+  position: relative;
+  z-index: 1;
+}
+
+.index-wrapper .page-one-2 h3 {
+  font-size: 35px;
+  font-weight: normal;
+}
+
+.index-wrapper .page-one-2 h2 {
+  font-size: 55px;
+  padding: 18% 0 50px;
+}
+
+.index-wrapper {
+  .page-one {
+    text-align: center;
+    padding: 80px 0;
+
+    h2 {
+      font-size: 30px;
+      color: $light;
+    }
+
+    h3 {
+      margin: 10px 0 70px;
+      font-size: 14px;
+      color: #454b55;
+    }
+
+    .type-list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .type-item {
+      width: 384px;
+      height: 322px;
+      background-color: #e0fcff;
+      padding-top: 220px;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 24px;
+      color: #004048;
+      background-position: center 58px;
+      background-repeat: no-repeat;
+
+      &:first-child {
+        background-position: center 68px;
+        background-image: url('/build/images/index/Socialrecruitment.png');
+      }
+
+      &:nth-child(2) {
+        background-image: url('/build/images/index/Internshiprecruitment.png');
+      }
+
+      &:nth-child(3) {
+        background-image: url('/build/images/index/Campusrecruitment.png');
+      }
+    }
+  }
+
+  .page-two {
+    background-color: $dark;
+
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left {
+        width: 700px;
+
+        h2 {
+          display: inline-block;
+          font-size: 30px;
+          color: $light;
+          margin-bottom: 70px;
+          padding: 0 20px 20px 0;
+          border-bottom: 2px solid $light;
+        }
+
+        p {
+          font-size: 20px;
+          color: #eefdff;
+          margin-bottom: 20px;
+        }
+      }
+
+      .right {
+        width: 410px;
+        padding-top: 240px;
+        font-size: 22px;
+        color: #eefdff;
+        text-align: center;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-image: url('/build/images/index/free.png');
+      }
+    }
+  }
+
+  .page-three {
+    text-align: center;
+
+    h2 {
+      display: inline-block;
+      font-size: 30px;
+      padding: 20px;
+      color: $light;
+      border-bottom: 2px solid $light;
+    }
+
+    .step-list {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+
+      .step-item {
+        position: relative;
+        width: 222px;
+        height: 208px;
+        padding: 70px 20px 0;
+        font-size: 16px;
+        line-height: 24px;
+        background-color: #e0fcff;
+        color: #004048;
+        box-sizing: border-box;
+      }
+
+      .index {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 68px;
+        top: -34px;
+        z-index: 1;
+        background-image: url('/build/images/index/index.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-size: 24px;
+        line-height: 68px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+
+  .page-four-2 {
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+
+      .video {
+        width: 720px;
+        flex-shrink: 0;
+        margin-right: 50px;
+
+        video {
+          width: 100%;
+        }
+      }
+
+      .china {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .item {
+          height: 120px;
+          padding-left: 230px;
+          padding-top: 15px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: left center;
+
+          &:nth-child(1) {
+            background-image: url('/build/images/index/food.png');
+          }
+
+          &:nth-child(2) {
+            background-image: url('/build/images/index/shup.png');
+          }
+
+          &:nth-child(3) {
+            background-image: url('/build/images/index/time.png');
+          }
+        }
+
+        .title {
+          display: block;
+          font-size: 24px;
+          color: #000;
+        }
+
+        .type {
+          font-size: 14px;
+          color: #000;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .page-four {
+    background-color: $dark;
+    text-align: center;
+
+    h2 {
+      display: inline-block;
+      font-size: 30px;
+      color: #eefdff;
+      padding: 20px;
+      border-bottom: 2px solid #eefdff;
+    }
+
+    .job-container {
+      padding-bottom: 50px;
+    }
+
+    .job-list,
+    .job-item {
+      margin: 0 !important;
+    }
+
+    .swiper-container,
+    .swiper-wrapper,
+    .swiper-slide {
+      height: 110px;
+    }
+
+    .swiper-container {
+      padding: 0 150px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 110px;
+      margin: 0;
+      width: 80px;
+      background-color: #114974;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      border-right: 70px solid $dark;
+      background-image: url('/build/images/index/left.png');
+    }
+
+    .swiper-button-next {
+      right: 0;
+      border-left: 70px solid $dark;
+      background-image: url('/build/images/index/right.png');
+    }
+
+    .swiper-slide {
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &.kuangye {
+        background-image: url('/build/images/index/kuangye.png');
+      }
+
+      &.huaihai {
+        background-image: url('/build/images/index/huaihai.png');
+      }
+
+      &.qiqi {
+        background-image: url('/build/images/index/qiqi.png');
+      }
+
+      &.wuyue {
+        background-image: url('/build/images/index/wuyue.png');
+      }
+    }
+  }
+
+  .page-five {
+    text-align: center;
+    background-color: $dark;
+
+    h2 {
+      font-size: 24px;
+      padding: 10px;
+      color: #eefdff;
+      display: inline-block;
+      border-bottom: 2px solid #eefdff;
+    }
+
+    h3 {
+      font-size: 14px;
+      color: #eefdff;
+      margin: 30px 0 50px;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .map {
+        flex: 1;
+        height: 350px;
+      }
+
+      .contact {
+        flex: 1;
+      }
+
+      .form-group {
+        margin-bottom: 30px;
+
+        label {
+          display: inline-block;
+          width: 180px;
+          font-size: 24px;
+          line-height: 38px;
+          color: #eefdff;
+          padding-right: 10px;
+          text-align: right;
+        }
+
+        .form-control {
+          vertical-align: top;
+          width: 366px;
+          border: 0;
+          padding: 0 15px;
+          font-size: 24px;
+          line-height: 38px;
+          background-color: #024777;
+          color: #eefdff;
+        }
+      }
+
+      .btn {
+        display: inline-block;
+        color: #fff;
+        font-size: 16px;
+        background-color: $light;
+        padding: 10px 30px;
+        cursor: pointer;
+      }
+    }
+  }
 }

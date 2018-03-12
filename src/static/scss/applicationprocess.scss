@@ -1,0 +1,145 @@
+.application-wrapper {
+  min-height: 100vh;
+  padding-top: 70px;
+  background-image: url('/build/images/applicationprocess/paper-bg.jpg');
+  background-repeat: repeat;
+}
+
+.application-wrapper h2 {
+  padding: 50px 0 0;
+  font-size: 50px;
+  text-align: center;
+}
+
+.application-wrapper h2 .orange {
+  color: #f26657;
+}
+
+.application-wrapper h2 .blue {
+  color: #41b6c8;
+}
+
+.application-wrapper .step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.application-wrapper .step::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  margin: auto;
+  height: 2px;
+  background-color: #41b6c8;
+}
+
+.application-wrapper .step .content {
+  width: 500px;
+  margin: 50px;
+  font-size: 20px;
+}
+
+.application-wrapper .step h3 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.application-wrapper .step:nth-child(odd) img {
+  order: -1;
+}
+
+.application-wrapper .step:nth-child(odd)::after {
+  background-color: #f26657;
+}
+
+.application-wrapper .step:last-of-type::after {
+  width: 100%;
+}
+
+.application-wrapper .time-table {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  border-bottom: 2px solid #f26657;
+}
+
+.application-wrapper table {
+  text-align: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.application-wrapper table td {
+  font-size: 20px;
+  padding: 20px 30px;
+  border: 2px solid #aaa;
+}
+
+.application-wrapper .tip {
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 20px;
+}
+
+.application-wrapper .session {
+  width: 800px;
+  padding: 50px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.application-wrapper .session li {
+  position: relative;
+  display: inline-block;
+  max-width: 500px;
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.application-wrapper .session .left {
+  float: left;
+  margin-left: 10px;
+  background-color: #f26657;
+}
+
+.application-wrapper .session .left::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-right: 10px solid #f26657;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.application-wrapper .session .right {
+  float: right;
+  margin-right: 10px;
+  background-color: #41b6c8;
+}
+
+.application-wrapper .session .right::before {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 20px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #41b6c8;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}

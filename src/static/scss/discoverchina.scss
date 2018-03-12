@@ -1,0 +1,113 @@
+.discover-wrapper {
+  padding-top: 70px;
+
+  .banner {
+    font-size: 0;
+    height: 600px;
+    background-image: url('/build/images/discoverchina/banner.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content {
+    padding: 60px 0 50px;
+    text-align: center;
+
+    h2 {
+      font-size: 30px;
+      color: #000438;
+      font-weight: bolder;
+    }
+
+    p {
+      font-size: 18px;
+      color: #9e9fac;
+      margin: 50px 0;
+    }
+  }
+
+  .cover-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    .cover-item {
+      position: relative;
+      height: 400px;
+      margin-bottom: 20px;
+      font-size: 30px;
+      line-height: 400px;
+      color: #fafcff;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      overflow: hidden;
+      cursor: pointer;
+      transition: color .5s ease;
+
+      &:hover {
+        color: transparent;
+
+        .text {
+          top: 0;
+        }
+      }
+
+      .text {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        right: 0;
+        padding: 30px;
+        font-size: 16px;
+        line-height: 24px;
+        overflow: hidden;
+        top: 100%;
+        color: #fff;
+        text-align: left;
+        transition: top .5s ease;
+
+        p {
+          margin-bottom: 1em;
+        }
+      }
+
+      &.size-s {
+        width: 420px;
+      }
+
+      &.size-m {
+        width: 590px;
+      }
+
+      &.size-l {
+        width: 760px;
+      }
+
+      &:nth-child(1) {
+        background-image: url('/build/images/discoverchina/ChieseFood.png');
+      }
+
+      &:nth-child(2) {
+        background-image: url('/build/images/discoverchina/LivinginChina.png');
+      }
+
+      &:nth-child(3) {
+        background-image: url('/build/images/discoverchina/Onlineshopping.png');
+      }
+
+      &:nth-child(4) {
+        background-image: url('/build/images/discoverchina/Electronicpayments.png');
+      }
+
+      &:nth-child(5) {
+        background-image: url('/build/images/discoverchina/High-speedrailways.png');
+      }
+
+      &:nth-child(6) {
+        background-image: url('/build/images/discoverchina/AswenotedinMarchthisyear,China’sbikesharing—or,more.png');
+      }
+    }
+  }
+}

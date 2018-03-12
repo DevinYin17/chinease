@@ -34,52 +34,64 @@ use yii\helpers\Url;
 
 <body class="<?php if (Yii::$app->request->getPathInfo() == '') { echo 'home-page-wrapper'; } ?>">
     <header>
-        <h1>Chinease</h1>
-        <h2>Employment and relocation link for English language teachers looking to work in China</h2>
-        <nav>
+        <nav class="container">
             <ul class="menu">
-                <li class="menu-item">
-                    <a href="/home">HOME</a>
+                <li class="menu-item <?php if (Yii::$app->request->getPathInfo() == '') { echo 'active'; } ?>">
+                    <a href="/">Home</a>
                 </li>
-                <li class="menu-item">
-                    <a href="/job">JOB VACANCY</a>
+                <li class="menu-item sub-menu <?php if (Yii::$app->request->getPathInfo() == 'jobvacancy') { echo 'active'; } ?>">
+                    <a href="/jobvacancy">Job Vacancy</a>
+
+                    <ul class="sub-menu-list">
+                        <li class="sub-menu-item">
+                            <a href="/job?type=internship">Internship</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="/job?type=graduate_scheme">Graduate Scheme</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="/job?type=social_recruitment">Social Recruitment</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="menu-item">
-                    <a href="/process">APPLICATION PROCESS</a>
+                <li class="menu-item <?php if (Yii::$app->request->getPathInfo() == 'applicationprocess') { echo 'active'; } ?>">
+                    <a href="/applicationprocess">Application Process</a>
                 </li>
-                <li class="menu-item">
-                    <a href="/china">DISCOVER CHINA</a>
+                <li class="menu-item <?php if (Yii::$app->request->getPathInfo() == 'discoverchina') { echo 'active'; } ?>">
+                    <a href="/discoverchina">Discover China</a>
                 </li>
-                <li class="menu-item">
-                    <a href="/contact">CONTACT US</a>
+                <li class="menu-item <?php if (Yii::$app->request->getPathInfo() == 'contactus') { echo 'active'; } ?>">
+                    <a href="/contactus">Contact Us</a>
                 </li>
-                <li class="menu-item">
-                    <a href="/signin">SIGNIN</a>
-                </li>
-                <li class="menu-item">
-                    <a href="/signup">SIGNUP</a>
+                <li class="menu-item login-btn">
+                    <a href="/signup">Sign Up/Login</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <?php echo Yii::$app->request->getPathInfo(); ?>
-
         <?php $this->beginBody() ?>
         <?= $content ?>
     </main>
 
-
-    <section class="fixed-wrapper">
-        fixed
-    </section>
-
     <footer>
-        <div class="container license">
-            ©2017 -
-            <a href="/">Chinease Ltd</a>
-        </div>
+        <div class="tip">Please follow & like us :)</div>
+        <ul class="attention-list">
+          <li class="attention-item">
+            <a href="/"></a>
+          </li>
+          <li class="attention-item">
+            <a href="/"></a>
+          </li>
+          <li class="attention-item">
+            <a href="/"></a>
+          </li>
+          <li class="attention-item">
+            <a href="/"></a>
+          </li>
+        </ul>
+        <div class="license">©2017 - <a href="/">Chinease Ltd</a></div>
     </footer>
     <?php $this->endBody() ?>
 </body>
