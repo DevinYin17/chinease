@@ -93,6 +93,30 @@ use yii\helpers\Url;
         </ul>
         <div class="license">©2017 - <a href="/">Chinease Ltd</a></div>
     </footer>
+
+    <section class="modal">
+      <i class="mask"></i>
+      <div class="main">
+        <div class="title">Registered</div>
+        <div class="modal-input">
+          <span class="input-title">Email:</span>
+          <input type="text"/>
+        </div>
+
+        <div class="modal-input">
+          <span class="input-title">Password:</span>
+          <input type="password"/>
+        </div>
+
+        <div class="modal-input">
+          <span class="input-title">Confirm Password:</span>
+          <input type="password"/>
+        </div>
+
+        <div class="btn">Create an account</div>
+        <div class="tip">Other chinease.co.uk services</div>
+      </div>
+    </section>
     <?php $this->endBody() ?>
 </body>
 </html>

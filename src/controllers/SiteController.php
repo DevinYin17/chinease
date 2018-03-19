@@ -56,6 +56,11 @@ class SiteController extends Controller
         return $this->renderPage('job');
     }
 
+    public function actionJobdetail()
+    {
+        return $this->renderPage('jobdetail');
+    }
+
     /**
      * Displays signup page.
      *

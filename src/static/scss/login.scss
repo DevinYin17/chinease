@@ -1,3 +1,87 @@
-.login-wrapper {
-  font-size: 12px;
+.modal {
+  opacity: 0;
+  transition: opacity .5s ease;
+
+  &.active {
+    opacity: 1;
+  }
+
+  .mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .main {
+    position: fixed;
+    width: 600px;
+    padding: 0 120px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 101;
+  }
+
+  .title {
+    padding: 50px 0 40px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .modal-input {
+    display: flex;
+    border: 1px solid #aaa;
+    padding: 0 25px;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 45px;
+
+    .input-title {
+      flex-grow: 0;
+      flex-shrink: 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: #777;
+    }
+
+    input {
+      border: 0;
+      outline: 0;
+      flex: 1;
+      padding: 0 10px;
+      width: 0;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .btn {
+    background-color: $light;
+    color: #fff;
+    margin-bottom: 150px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .tip {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    text-align: center;
+    background-color: $dark;
+    font-size: 16px;
+    line-height: 65px;
+    color: #fff;
+  }
 }
