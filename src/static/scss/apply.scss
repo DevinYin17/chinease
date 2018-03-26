@@ -1,0 +1,38 @@
+.apply-wrapper {
+  padding-top: 70px;
+
+  .content {
+    text-align: center;
+
+    .title {
+      padding-top: 90px;
+      font-size: 26px;
+    }
+
+    .upload {
+      display: inline-block;
+      margin-top: 60px;
+      padding: 15px 20px;
+      font-size: 16px;
+      background-color: $light;
+      color: #fff;
+    }
+
+    .desc {
+      margin-top: 60px;
+      font-size: 12px;
+    }
+
+    .link {
+      display: block;
+      margin: 40px 0 90px;
+      font-size: 12px;
+      color: $light;
+
+      a {
+        font-size: 16px;
+        color: $light;
+      }
+    }
+  }
+}

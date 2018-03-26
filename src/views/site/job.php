@@ -13,13 +13,15 @@
 
     <ul class="job-list">
       <li class="job-item">
-        <i class="logo job1"></i>
-        <div class="desc">
-          <label class="name">ENGLISH TEACHER</label>
-          <span class="info">Full Time</span>
-          <span class="info">12,000 - 24,000</span>
-          <span class="info">China - Shanghai</span>
-        </div>
+        <a href="/site/jobdetail">
+          <i class="logo job1"></i>
+          <div class="desc">
+            <label class="name">ENGLISH TEACHER</label>
+            <span class="info">Full Time</span>
+            <span class="info">12,000 - 24,000</span>
+            <span class="info">China - Shanghai</span>
+          </div>
+        </a>
       </li>
 
       <li class="job-item">

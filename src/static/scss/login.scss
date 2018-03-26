@@ -1,9 +1,9 @@
 .modal {
-  opacity: 0;
+  display: none;
   transition: opacity .5s ease;
 
   &.active {
-    opacity: 1;
+    display: block;
   }
 
   .mask {

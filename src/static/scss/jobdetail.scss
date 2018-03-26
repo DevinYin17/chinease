@@ -1,0 +1,124 @@
+.jobdetail-wrapper {
+  .content {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left {
+    width: 830px;
+    border: 1px solid #aaa;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 50px 45px;
+    box-sizing: border-box;
+
+    .title {
+      font-size: 26px;
+      color: $light;
+    }
+
+    .label {
+      font-size: 20px;
+    }
+
+    .info {
+      font-size: 16px;
+      line-height: 32px;
+      white-space: pre-line;
+      color: #919191;
+
+      &.mark {
+        color: $light;
+      }
+    }
+
+    .line {
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+
+    .basic-list {
+      padding: 30px 50px;
+      border: 1px solid #aaa;
+      background-color: #ddd;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .basic-item {
+      flex-grow: 0;
+      flex-shrink: 0;
+      font-size: 16px;
+      line-height: 22px;
+
+      &.xl {
+       width: 380px;
+      }
+
+      &.l {
+       width: 200px;
+      }
+
+      .basic-title {
+        margin: 10px 0;
+      }
+
+      .basic-info {
+        color: #919191;
+        white-space: pre-line;
+      }
+    }
+
+    .btn {
+      display: block;
+      width: 170px;
+      margin: 50px auto;
+      font-size: 20px;
+      line-height: 50px;
+      color: #fff;
+      background-color: $light;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .right {
+    width: 330px;
+    border: 1px solid #aaa;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    .label {
+      text-align: center;
+      font-size: 18px;
+      padding: 0 0 20px;
+    }
+
+    .info {
+      font-size: 16px;
+      line-height: 32px;
+      color: #919191;
+
+      &.title {
+        color: $light;
+      }
+
+      &.center {
+        text-align: center;
+      }
+    }
+
+    .line {
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+  }
+}

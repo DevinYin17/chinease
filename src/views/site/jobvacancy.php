@@ -1,5 +1,5 @@
 <div class="jobvacancy-wrapper">
-  <div class="banner">
+  <div class="job-banner">
     <div class="search-container">
       <div class="dropdown cus-input">
         Type

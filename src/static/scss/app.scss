@@ -9,6 +9,8 @@
 @import "discoverchina";
 @import "jobvacancy";
 @import "job";
+@import "jobdetail";
+@import "apply";
 
 html {
   font-family: 'Oswald', sans-serif !important;
@@ -191,6 +193,104 @@ li {
       .info {
         display: block;
         padding: 5px;
+      }
+    }
+  }
+}
+
+
+
+.job-banner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url('/build/images/jobvacancy/banner.png');
+  background-size: cover;
+  background-position: center;
+
+  .search-container {
+    padding-top: 260px;
+    text-align: center;
+
+    .cus-input {
+      margin-right: 16px;
+      font-size: 24px;
+      line-height: 65px;
+    }
+
+    .cus-btn {
+      font-size: 24px;
+      line-height: 65px;
+      padding: 0 25px;
+    }
+
+    .dropdown {
+      cursor: pointer;
+      padding-right: 30px;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        top: 25px;
+        bottom: 0;
+        right: 10px;
+        transform: rotate(-45deg);
+      }
+
+      &:hover {
+        .dropdown-list {
+          height: 120px;
+        }
+      }
+    }
+
+    .dropdown-list {
+      font-size: 16px;
+      line-height: 38px;
+      position: absolute;
+      height: 0;
+      left: -1px;
+      right: -1px;
+      top: 100%;
+      overflow: hidden;
+      transition: height .5s ease;
+      z-index: 1;
+    }
+
+    .dropdown-item {
+      border: 1px solid #fff;
+      border-top: 0;
+      padding: 0 15px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, .2);
+      }
+    }
+  }
+
+  .count-list {
+    display: flex;
+    margin-top: 130px;
+
+    .count-item {
+      flex: 1;
+      font-size: 24px;
+      color: #eefdff;
+      border-right: 1px solid #eefdff;
+      text-align: center;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      .number {
+        display: block;
+        font-size: 18px;
       }
     }
   }
