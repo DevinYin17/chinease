@@ -6,6 +6,20 @@
     display: block;
   }
 
+  &.reg {
+    .login {
+      display: none !important;
+    }
+
+    .register {
+      display: block !important;
+    }
+  }
+
+  .register {
+    display: none !important;
+  }
+
   .mask {
     position: fixed;
     left: 0;
@@ -60,6 +74,11 @@
       width: 0;
       font-size: 16px;
       line-height: 20px;
+
+      &:-webkit-autofill {
+       -webkit-text-fill-color: #000 !important;
+       transition: background-color 5000s ease-in-out 0s;
+      }
     }
   }
 
@@ -83,5 +102,24 @@
     font-size: 16px;
     line-height: 65px;
     color: #fff;
+  }
+
+  .type {
+    position: relative;
+    margin-bottom: 20px;
+
+    a {
+      color: $light;
+    }
+
+    .error-message {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: red;
+      background-color: #fff;
+      z-index: 1;
+    }
   }
 }

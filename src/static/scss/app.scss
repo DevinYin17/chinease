@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "upload";
 @import "header";
 @import "footer";
 @import "index";
@@ -159,6 +160,7 @@ li {
         background-color: #fff;
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
 
         &.job1 {
           background-image: url('/build/images/jobvacancy/1.png');

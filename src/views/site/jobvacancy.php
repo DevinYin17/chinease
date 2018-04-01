@@ -63,45 +63,22 @@
       </div>
 
       <ul class="job-list">
-        <li class="job-item">
-          <i class="logo job1"></i>
-          <div class="desc">
-            <label class="name">ENGLISH TEACHER</label>
-            <span class="info">Full Time</span>
-            <span class="info">12,000 - 24,000</span>
-            <span class="info">China - Shanghai</span>
-          </div>
-        </li>
 
-        <li class="job-item">
-          <i class="logo job2"></i>
-          <div class="desc">
-            <label class="name">Teach in the Ancient City of China</label>
-            <span class="info">Full Time</span>
-            <span class="info">12,000 - 24,000</span>
-            <span class="info">China - Shanghai</span>
-          </div>
-        </li>
+        <?php foreach ($this->params['model'] as $job) {
+          ?>
+          <a class="job-item" href="/site/jobdetail?id=<?= $job['id']?>">
+            <i class="logo job1" style="background-image: url(<?= $job['pic']?>)"></i>
+            <div class="desc">
+              <label class="name"><?= $job['title']?></label>
+              <span class="info"><?= $job['base_type']?></span>
+              <span class="info"><?= $job['salary']?></span>
+              <span class="info"><?= $job['base_location']?></span>
+            </div>
+          </a>
+            <?php
+        } ?>
 
-        <li class="job-item">
-          <i class="logo job3"></i>
-          <div class="desc">
-            <label class="name">ESL Foreign Teacher</label>
-            <span class="info">Full Time</span>
-            <span class="info">12,000 - 24,000</span>
-            <span class="info">China - Tianjin, Shijiazhuang, Taiyuan</span>
-          </div>
-        </li>
 
-        <li class="job-item">
-          <i class="logo job4"></i>
-          <div class="desc">
-            <label class="name">Online teachers</label>
-            <span class="info">Full Time</span>
-            <span class="info">12,000 - 24,000</span>
-            <span class="info">China - Shanghai</span>
-          </div>
-        </li>
       </ul>
     </div>
   </div>

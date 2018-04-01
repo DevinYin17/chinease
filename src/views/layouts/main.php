@@ -72,7 +72,7 @@ use app\assets\AppAsset;
                         <a href="/site/contactus">Contact Us</a>
                     </li>
                     <li class="menu-item login-btn">
-                        <a class="signup">Sign Up/Login</a>
+                        <a class="signup" href="javascript:void(0);">Sign Up/Login</a>
                     </li>
                 </ul>
             </nav>
@@ -105,23 +105,32 @@ use app\assets\AppAsset;
         <section class="modal">
           <i class="mask"></i>
           <div class="main">
-            <div class="title">Registered</div>
+            <div class="title register">Registered</div>
+            <div class="title login">Sign in to CHINEASE</div>
             <div class="modal-input">
               <span class="input-title">Email:</span>
-              <input type="text"/>
+              <input type="text" id="email"/>
             </div>
 
             <div class="modal-input">
               <span class="input-title">Password:</span>
-              <input type="password"/>
+              <input type="password" id="password"/>
             </div>
 
-            <div class="modal-input">
-              <span class="input-title">Confirm Password:</span>
-              <input type="password"/>
+            <div class="register">
+              <div class="modal-input">
+                <span class="input-title">Confirm Password:</span>
+                <input type="password" id="repassword"/>
+              </div>
             </div>
 
-            <div class="btn">Create an account</div>
+            <div class="type">
+              <a href="javascript:void(0);" class="to-register">Register</a>
+              <div class="error-message"></div>
+            </div>
+
+            <div class="btn register modal-register">Create an account</div>
+            <div class="btn login modal-login">Sign in</div>
             <div class="tip">Other chinease.co.uk services</div>
           </div>
         </section>
@@ -138,23 +147,23 @@ use app\assets\AppAsset;
             ]);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                    ['label' => 'Contact', 'url' => ['/site/contact']],
-                    Yii::$app->user->isGuest ? (
-                        ['label' => 'Login', 'url' => ['/site/login']]
-                    ) : (
-                        '<li>'
-                        . Html::beginForm(['/site/logout'], 'post')
-                        . Html::submitButton(
-                            'Logout (' . Yii::$app->user->identity->username . ')',
-                            ['class' => 'btn btn-link logout']
-                        )
-                        . Html::endForm()
-                        . '</li>'
-                    )
-                ],
+                // 'items' => [
+                //     ['label' => 'Home', 'url' => ['/site/index']],
+                //     ['label' => 'About', 'url' => ['/site/about']],
+                //     ['label' => 'Contact', 'url' => ['/site/contact']],
+                //     Yii::$app->user->isGuest ? (
+                //         ['label' => 'Login', 'url' => ['/site/login']]
+                //     ) : (
+                //         '<li>'
+                //         . Html::beginForm(['/site/logout'], 'post')
+                //         . Html::submitButton(
+                //             'Logout (' . Yii::$app->user->identity->username . ')',
+                //             ['class' => 'btn btn-link logout']
+                //         )
+                //         . Html::endForm()
+                //         . '</li>'
+                //     )
+                // ],
             ]);
             NavBar::end();
             ?>

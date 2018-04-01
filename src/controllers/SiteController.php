@@ -14,6 +14,8 @@ use app\utils\UrlUtil;
 use app\models\User;
 use app\models\Validation;
 use app\models\Account;
+use app\models\Job;
+use app\models\JobSearch;
 
 class SiteController extends Controller
 {
@@ -48,17 +50,26 @@ class SiteController extends Controller
 
     public function actionJobvacancy()
     {
-        return $this->renderPage('jobvacancy');
+        $model = Job::find()->all();
+        return $this->renderPage('jobvacancy', '','','','',[
+            'model' => $model,
+        ]);
     }
 
     public function actionJob()
     {
-        return $this->renderPage('job');
+        $model = Job::find()->all();
+        return $this->renderPage('job', '','','','',[
+            'model' => $model,
+        ]);
     }
 
-    public function actionJobdetail()
+    public function actionJobdetail($id)
     {
-        return $this->renderPage('jobdetail');
+        $model = Job::findOne(['id' => $id]);
+        return $this->renderPage('jobdetail', '','','','',[
+            'model' => $model,
+        ]);
     }
 
     public function actionApply()

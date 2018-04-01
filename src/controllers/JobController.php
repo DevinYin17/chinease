@@ -3,11 +3,13 @@
 namespace app\controllers;
 
 use Yii;
+use yii\web\View;
 use app\models\Job;
 use app\models\JobSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\components\UploadHandler;
 
 /**
  * JobController implements the CRUD actions for Job model.
@@ -70,6 +72,8 @@ class JobController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
+        $this->view->registerJsFile('/build/script/upload.js', ['position' => View::POS_END]);
+        $this->view->registerJsFile('/build/script/jobcreate.js', ['position' => View::POS_END]);
         return $this->render('create', [
             'model' => $model,
         ]);
@@ -107,6 +111,11 @@ class JobController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionPic()
+    {
+      $upload_handler = new UploadHandler();
     }
 
     /**

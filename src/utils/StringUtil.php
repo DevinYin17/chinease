@@ -94,4 +94,24 @@ class StringUtil
 
         return $charlist;
     }
+
+    public static function isJson($string)
+    {
+        return is_string($string) &&
+                (is_object(json_decode($string)) || is_array(json_decode($string, true))) &&
+                (json_last_error() == JSON_ERROR_NONE) ? true : false;
+    }
+
+    public static function formatSpecialChars($string)
+    {
+        $events = '(onclick|ondblclick|onload|onunload|onchange|onmouseup|onmousemove|onmousedown|onmouseover|onmouseout|'
+                . 'onfocus|onabort|onblur|onerror|onkeydown|onkeypress|onkeyup|onreset|onresize|onselect|onsubmit)';
+
+        $regrex = '/(<[^>]*' . $events . '[^<]*>)|(<script>.*<\/script>)|javascript/i';
+        if (preg_match($regrex, $string)) {
+            return htmlspecialchars($string);
+        }
+
+        return $string;
+    }
 }
