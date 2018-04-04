@@ -10,12 +10,16 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\components\UploadHandler;
+use app\components\BaseControllerTrait;
+use app\exceptions\InvalidParameterException;
 
 /**
  * JobController implements the CRUD actions for Job model.
  */
 class JobController extends Controller
 {
+
+    use BaseControllerTrait;
     /**
      * @inheritdoc
      */
@@ -30,6 +34,15 @@ class JobController extends Controller
             ],
         ];
     }
+
+    public function beforeAction($action)
+    {
+        if (!isset($_COOKIE['token']) || empty($_COOKIE['token']) || $this->isAdmin($_COOKIE['token']) === '0') {
+          throw new InvalidParameterException('403');
+        }
+        return true;
+    }
+
 
     /**
      * Lists all Job models.
@@ -94,6 +107,8 @@ class JobController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
+        $this->view->registerJsFile('/build/script/upload.js', ['position' => View::POS_END]);
+        $this->view->registerJsFile('/build/script/jobcreate.js', ['position' => View::POS_END]);
         return $this->render('update', [
             'model' => $model,
         ]);

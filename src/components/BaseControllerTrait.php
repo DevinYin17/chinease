@@ -5,6 +5,7 @@ use app\exceptions\InvalidParameterException;
 use app\utils\StringUtil;
 use Yii;
 use yii\helpers\Json;
+use app\models\User;
 
 trait BaseControllerTrait
 {
@@ -55,5 +56,18 @@ trait BaseControllerTrait
     public function getQuery($key = null, $default = null)
     {
         return Yii::$app->request->get($key, $default);
+    }
+
+
+    public static function isAdmin($token)
+    {
+      $user = User::findOne(['token' => $token]);
+      if (empty($user['id'])) {
+          throw new InvalidParameterException('none');
+      }
+
+      $tokenStr = base64_decode($token);
+      $isAdmin = substr($tokenStr, 10, 1);
+      return $isAdmin;
     }
 }

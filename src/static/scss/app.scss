@@ -141,6 +141,7 @@ li {
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .job-item {
       width: 274px;
@@ -149,6 +150,11 @@ li {
       border: 1px solid #e1e1e1;
       cursor: pointer;
       margin-bottom: 32px;
+
+      &.empty {
+        height: 0;
+        border: 0 !important;
+      }
 
       &:hover {
         box-shadow: 0 0 8px rgba(0, 0, 0, .5);

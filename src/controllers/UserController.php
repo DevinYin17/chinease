@@ -8,12 +8,16 @@ use app\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\components\BaseControllerTrait;
+use app\exceptions\InvalidParameterException;
 
 /**
  * UserController implements the CRUD actions for User model.
  */
 class UserController extends Controller
 {
+
+    use BaseControllerTrait;
     /**
      * @inheritdoc
      */
@@ -27,6 +31,14 @@ class UserController extends Controller
                 ],
             ],
         ];
+    }
+
+    public function beforeAction($action)
+    {
+        if (!isset($_COOKIE['token']) || empty($_COOKIE['token']) || $this->isAdmin($_COOKIE['token']) === '0') {
+          throw new InvalidParameterException('403');
+        }
+        return true;
     }
 
     /**

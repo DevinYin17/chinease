@@ -196,9 +196,11 @@ $(function() {
 
   function initUser() {
     var user = localStorageService.getItem('user');
-    if (user.email) {
+    if (user.email && user.token) {
       $('.signup').html(user.email);
       $('.signup').addClass('online');
+
+      document.cookie = 'token=' + user.token;
     }
   }
 
@@ -237,8 +239,6 @@ $(function() {
           password: password.MD5()
         };
 
-        document.cookie = 'aaa=123';
-
         $.ajax({
           type: 'POST',
           url: '/common/login',
@@ -256,6 +256,7 @@ $(function() {
               $('.signup').html(data.email);
               $('.signup').addClass('online');
               $('.modal').removeClass('active');
+              initApply();
             }
           },
           error: function(data) {
@@ -294,6 +295,7 @@ $(function() {
               $('.signup').html(data.email);
               $('.signup').addClass('online');
               $('.modal').removeClass('active');
+              initApply();
             }
           },
           error: function(data) {
@@ -345,10 +347,50 @@ $(function() {
     }
   }
 
+  function initApply() {
+    if (location.pathname.indexOf('site/apply') !== -1) {
+      var user = localStorageService.getItem('user');
+
+      if (user.email) {
+        $('.job-apply').html('upload cv');
+
+        if (user.resume) {
+          var resumeArr = user.resume.split('/');
+          var resume = resumeArr[resumeArr.length - 1];
+          $('.job-apply').after('<div class="upload" style="margin-left:20px">use ' + resume + '</div>');
+        }
+      } else {
+        $('.job-apply').html('Sign Up/Login');
+      }
+
+      $('#jobResume').fileupload({
+          url: '/resume/upload',
+          dataType: 'json',
+          // limitMultiFileUploads: 1,
+          // limitMultiFileUploadSize: 2000,
+          done: function (e, data) {
+              alert('success');
+          }
+      }).prop('disabled', !$.support.fileInput)
+          .parent().addClass($.support.fileInput ? undefined : 'disabled');
+    }
+
+    $('.job-apply').on('click', function() {
+      var user = localStorageService.getItem('user');
+
+      if (user.email) {
+        $('#jobResume').trigger('click');
+      } else {
+        $('.signup').trigger('click');
+      }
+    });
+  }
+
   function init() {
     initUser();
     Login();
     initMask();
+    initApply();
   }
 
   init();

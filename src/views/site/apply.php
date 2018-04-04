@@ -45,15 +45,16 @@
   </div>
 
   <div class="content">
+    <input id="jobResume" style="opacity: 0;width: 0;height: 0;display: block;" type="file" name="files[]" multiple>
     <h2 class="title">Create a Resume</h2>
-    <div class="upload">upload cv</div>
+    <div class="upload job-apply">upload cv</div>
     <p class="desc">
       Creating a resume means that you agree to the terms of service, Cookie agreement<br/>
       and privacy agreement, and agree to the employer. Contact you.
     </p>
     <span class="link">
       Already have an account?
-      <a href="javascript:void:0;">The login</a>
+      <a href="javascript:void:0;">Then login</a>
     <span>
   </div>
 </div>

@@ -15,7 +15,6 @@ class CommonController extends Controller
 
     public function actionLogin()
     {
-      var_dump(Yii::$app->request->cookies);die;
         $params = $this->getParams();
         $user = User::findOne(['email' => $params['email'], 'password' => $params['password']]);
 
@@ -63,17 +62,5 @@ class CommonController extends Controller
       } else {
         return $user;
       }
-    }
-
-    public function isAdmin($token)
-    {
-      $user = User::findOne(['token' => $token]);
-      if (empty($user['id'])) {
-          throw new InvalidParameterException('none');
-      }
-
-      $tokenStr = base64_decode($token);
-      $isAdmin = substr($tokenStr, 10, 1);
-      return $isAdmin;
     }
 }

@@ -78,7 +78,9 @@
             <?php
         } ?>
 
-
+        <i class="job-item empty"></i>
+        <i class="job-item empty"></i>
+        <i class="job-item empty"></i>
       </ul>
     </div>
   </div>
