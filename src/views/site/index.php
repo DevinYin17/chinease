@@ -8,9 +8,9 @@
     <h2>Are you an English language teacher?</h2>
     <h3>Then why not come to CHINA?</h3>
     <div class="type-list container">
-      <a class="type-item" href="/job">Social Vacancy</a>
-      <a class="type-item" href="/job">Internship</a>
-      <a class="type-item" href="/job">Graduate Scheme</a>
+      <a class="type-item" href="/site/job?key=category&value=Current Vacancy">Current Vacancy</a>
+      <a class="type-item" href="/site/job?key=category&value=Graduate Scheme">Graduate Scheme</a>
+      <a class="type-item" href="/site/job?key=category&value=Internship">Internship</a>
     </div>
   </section>
 
@@ -64,45 +64,25 @@
     <div class="container">
       <div class="job-container">
         <ul class="job-list">
-          <li class="job-item">
-            <i class="logo job1"></i>
-            <div class="desc">
-              <label class="name">ENGLISH TEACHER</label>
-              <span class="info">Full Time</span>
-              <span class="info">12,000 - 24,000</span>
-              <span class="info">China - Shanghai</span>
-            </div>
-          </li>
 
-          <li class="job-item">
-            <i class="logo job2"></i>
-            <div class="desc">
-              <label class="name">Teach in the Ancient City of China</label>
-              <span class="info">Full Time</span>
-              <span class="info">12,000 - 24,000</span>
-              <span class="info">China - Shanghai</span>
-            </div>
-          </li>
+          <?php foreach ($this->params['model'] as $job) {
+            ?>
+            <a class="job-item" href="/site/jobdetail?id=<?= $job['id']?>">
+              <i class="logo job1" style="background-image: url(<?= $job['pic']?>)"></i>
+              <div class="desc">
+                <label class="name"><?= $job['title']?></label>
+                <span class="info"><?= $job['base_type']?></span>
+                <span class="info"><?= $job['salary']?></span>
+                <span class="info"><?= $job['base_location']?></span>
+              </div>
+            </a>
+              <?php
+          } ?>
 
-          <li class="job-item">
-            <i class="logo job3"></i>
-            <div class="desc">
-              <label class="name">ESL Foreign Teacher</label>
-              <span class="info">Full Time</span>
-              <span class="info">12,000 - 24,000</span>
-              <span class="info">China - Tianjin, Shijiazhuang, Taiyuan</span>
-            </div>
-          </li>
+          <i class="job-item empty"></i>
+          <i class="job-item empty"></i>
+          <i class="job-item empty"></i>
 
-          <li class="job-item">
-            <i class="logo job4"></i>
-            <div class="desc">
-              <label class="name">Online teachers</label>
-              <span class="info">Full Time</span>
-              <span class="info">12,000 - 24,000</span>
-              <span class="info">China - Shanghai</span>
-            </div>
-          </li>
         </ul>
       </div>
 
@@ -122,27 +102,34 @@
   <section class="section page-four-2">
     <div class="container">
       <div class="video">
-        <video controls>
+        <!-- <video controls>
           <source src="/build/images/index/movie.mp4" type="video/mp4">
           Your browser does not support the video tag.
-        </video>
+        </video> -->
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/W0SVb327Qqc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
 
       <div class="china">
-        <div class="item">
-          <label class="title">Chiese Food</label>
-          <label class="type">Product/Service Categories</label>
-        </div>
+        <a href="https://www.youtube.com/watch?v=wAEzpwvrveg" target="_blank">
+          <div class="item item-1">
+            <label class="title">Chiese Food</label>
+            <label class="type">Product/Service Categories</label>
+          </div>
+        </a>
 
-        <div class="item">
-          <label class="title">Online shopping</label>
-          <label class="type">Product/Service Categories</label>
-        </div>
+        <a href="https://www.youtube.com/watch?v=wAEzpwvrveg" target="_blank">
+          <div class="item item-2">
+            <label class="title">Online shopping</label>
+            <label class="type">Product/Service Categories</label>
+          </div>
+        </a>
 
-        <div class="item">
-          <label class="title">Reading time</label>
-          <label class="type">Product/Service Categories</label>
-        </div>
+        <a href="https://www.youtube.com/watch?v=wAEzpwvrveg" target="_blank">
+          <div class="item item-3">
+            <label class="title">Reading time</label>
+            <label class="type">Product/Service Categories</label>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -161,26 +148,26 @@
       <form class="contact">
         <div class="form-group">
           <label>Name:</label>
-          <input class="form-control"/>
+          <input class="form-control message-name"/>
         </div>
         <div class="form-group">
           <label>Email:</label>
-          <input class="form-control" />
+          <input class="form-control message-email" />
         </div>
         <div class="form-group">
           <label>Phone:</label>
-          <input class="form-control"/>
+          <input class="form-control message-phone"/>
         </div>
         <div class="form-group">
           <label>Address:</label>
-          <input class="form-control"/>
+          <input class="form-control message-address"/>
         </div>
         <div class="form-group">
           <label>Message:</label>
-          <textarea class="form-control" placeholder="Message"></textarea>
+          <textarea class="form-control message-message" placeholder="Message"></textarea>
         </div>
 
-        <span class="btn">Submit</span>
+        <span class="btn message-submit">Submit</span>
       </form>
     </div>
   </section>

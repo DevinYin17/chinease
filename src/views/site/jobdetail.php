@@ -5,15 +5,21 @@
       <div class="dropdown cus-input">
         Type
         <ul class="dropdown-list">
-          <li class="dropdown-item">social recruitment</li>
-          <li class="dropdown-item">graduate scheme</li>
-          <li class="dropdown-item">internship</li>
+          <a href="/site/job?key=category&value=Current Vacancy">
+            <li class="dropdown-item">Current Vacancy</li>
+          </a>
+          <a href="/site/job?key=category&value=Graduate Scheme">
+            <li class="dropdown-item">Graduate Scheme</li>
+          </a>
+          <a href="/site/job?key=category&value=Internship">
+            <li class="dropdown-item">Internship</li>
+          </a>
         </ul>
       </div>
 
-      <input placeholder="category" class="cus-input">
-      <input placeholder="city" class="cus-input">
-      <span class="cus-btn">search</span>
+      <input placeholder="category" class="cus-input job-category">
+      <input placeholder="city" class="cus-input job-location">
+      <span class="cus-btn job-search">search</span>
     </div>
 
     <ul class="count-list container">
@@ -87,47 +93,38 @@
       <div class="label">Responsibility:</div>
       <div class="info"><?= $this->params['model']['responsibility'] ?></div>
 
-      <a class="btn" href="/site/apply">Apply now!</a>
+      <a class="btn to-apply" href="javascript:void(0);" >Apply now!</a>
 
     </div>
 
     <div class="right">
       <div class="label">Similar jobs</div>
-      <div class="job-item line">
-        <div class="info title"><?= $this->params['model']['title'] ?></div>
-        <div class="info"><?= $this->params['model']['base_title'] ?></div>
-      </div>
-      <div class="job-item line">
-        <div class="info title"><?= $this->params['model']['title'] ?></div>
-        <div class="info"><?= $this->params['model']['base_title'] ?></div>
-      </div>
-      <div class="job-item line">
-        <div class="info title"><?= $this->params['model']['title'] ?></div>
-        <div class="info"><?= $this->params['model']['base_title'] ?></div>
-      </div>
-      <div class="job-item line">
-        <div class="info title"><?= $this->params['model']['title'] ?></div>
-        <div class="info"><?= $this->params['model']['base_title'] ?></div>
-      </div>
-      <div class="job-item line">
-        <div class="info title"><?= $this->params['model']['title'] ?></div>
-        <div class="info"><?= $this->params['model']['base_title'] ?></div>
-      </div>
+      <?php foreach ($this->params['jobs'] as $job) {
+        ?>
+        <a href="/site/jobdetail?id=<?= $job['id']?>">
+          <div class="job-item line">
+            <div class="info title"><?= $job['title'] ?></div>
+            <div class="info"><?= $job['base_title'] ?></div>
+          </div>
+        </a>
+
+          <?php
+      } ?>
 
       <div class="label">categories</div>
-      <div class="info center">Social recruitment</div>
-      <div class="info center">Intern recruitment</div>
-      <div class="info center line">Internship</div>
+      <a href="/site/job?key=category&value=Current Vacancy"><div class="info center">Current Vacancy</div></a>
+      <a href="/site/job?key=category&value=Graduate Scheme"><div class="info center">Graduate Scheme</div></a>
+      <a href="/site/job?key=category&value=Internship"><div class="info center line">Internship</div></a>
 
       <div class="label">location</div>
-      <div class="info center title">Beijing</div>
-      <div class="info center title">Shanghai</div>
-      <div class="info center title">Guangzhou</div>
-      <div class="info center title line">other</div>
+      <a href="/site/job?key=base_location&value=Beijing"><div class="info center title">Beijing</div></a>
+      <a href="/site/job?key=base_location&value=Shanghai"><div class="info center title">Shanghai</div></a>
+      <a href="/site/job?key=base_location&value=Jiangsu"><div class="info center title">Jiangsu</div></a>
+      <a href="/site/job?key=base_location&value="><div class="info center title line">other</div></a>
 
       <div class="label">contact ways</div>
       <div class="info center">
-        Email:<a>hello@chinease.co.uk</a>
+        Email:<a href="mailto:hello_chinease@outlook.com">hello_chinease@outlook.com</a>
       </div>
     </div>
   </div>

@@ -4,27 +4,33 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\UserSearch */
+/* @var $searchModel app\models\MessageSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Users';
+$this->title = 'Messages';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
 <style>
-.user-search .form-group {
+.message-search .form-group {
   display: inline-block;
   width: 150px;
 }
-</style>
-<div class="user-index">
 
+td {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+</style>
+<div class="message-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
-
-
+    <p>
+        <?= Html::a('Create Message', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -35,11 +41,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'email:email',
-            'password',
-            'isAdmin',
-            //'resume',
-            //'resume_id',
-            //'token',
+            'phone',
+            'address',
+            'message',
+            'date',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

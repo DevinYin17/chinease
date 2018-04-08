@@ -10,10 +10,16 @@ use yii\grid\GridView;
 $this->title = 'Jobs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+.job-search .form-group {
+  display: inline-block;
+  width: 150px;
+}
+</style>
 <div class="job-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('Create Job', ['create'], ['class' => 'btn btn-success']) ?>

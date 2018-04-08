@@ -4,15 +4,21 @@
       <div class="dropdown cus-input">
         Type
         <ul class="dropdown-list">
-          <li class="dropdown-item">social recruitment</li>
-          <li class="dropdown-item">graduate scheme</li>
-          <li class="dropdown-item">internship</li>
+          <a href="/site/job?key=category&value=Current Vacancy">
+            <li class="dropdown-item">Current Vacancy</li>
+          </a>
+          <a href="/site/job?key=category&value=Graduate Scheme">
+            <li class="dropdown-item">Graduate Scheme</li>
+          </a>
+          <a href="/site/job?key=category&value=Internship">
+            <li class="dropdown-item">Internship</li>
+          </a>
         </ul>
       </div>
 
-      <input placeholder="category" class="cus-input">
-      <input placeholder="city" class="cus-input">
-      <span class="cus-btn">search</span>
+      <input placeholder="category" class="cus-input job-category">
+      <input placeholder="city" class="cus-input job-location">
+      <span class="cus-btn job-search">search</span>
     </div>
 
     <ul class="count-list container">
@@ -44,9 +50,9 @@
   </div>
 
   <ul class="type-list container">
-    <a class="type-item" href="#">current vacancy</a>
-    <a class="type-item" href="#">raduate scheme</a>
-    <a class="type-item" href="#">internship</a>
+    <a class="type-item" href="/site/job?key=category&value=Current Vacancy">Current Vacancy</a>
+    <a class="type-item" href="/site/job?key=category&value=Graduate Scheme">Graduate Scheme</a>
+    <a class="type-item" href="/site/job?key=category&value=Internship">Internship</a>
   </ul>
 
   <div class="job-container">
@@ -56,9 +62,9 @@
         <span class="text">We are right here looking forward to help the first step of your adventure to China!</span>
 
         <div class="btn-right">
-          <input placeholder="category" class="cus-input">
-          <input placeholder="city" class="cus-input">
-          <span class="cus-btn">search</span>
+          <input placeholder="category" class="cus-input job-category">
+          <input placeholder="city" class="cus-input job-location">
+          <span class="cus-btn job-search">search</span>
         </div>
       </div>
 

@@ -19,7 +19,7 @@ $(function() {
     var mapCanvas = document.getElementById("map");
     var mapOptions = {
       center: new google.maps.LatLng(54.976488, -1.606866),
-      zoom: 10
+      zoom: 14
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
   }
@@ -40,6 +40,16 @@ $(function() {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    onInit: function(swiper) {
+      $('.swiper-button-next').on('click', function() {
+        swiper.slideNext();
+      });
+      $('.swiper-button-prev').on('click', function() {
+        swiper.slidePrev();
+      });
     }
   });
+
+
 });

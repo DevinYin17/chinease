@@ -30,7 +30,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->renderPage('index', '/build/script/index.js');
+        $model = Job::find()->orderBy('id DESC')->limit(4)->all();
+        return $this->renderPage('index', '/build/script/index.js','','','',[
+            'model' => $model,
+        ]);
     }
 
     public function actionContactus()
@@ -56,9 +59,14 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionJob()
+    public function actionJob($key, $value)
     {
-        $model = Job::find()->all();
+        $condition = [];
+        if (!empty($key) && !empty($value)) {
+          $condition = ['like', $key, $value];
+        }
+        $model = Job::find()->where($condition)->orderBy('id DESC')->all();
+
         return $this->renderPage('job', '','','','',[
             'model' => $model,
         ]);
@@ -66,15 +74,44 @@ class SiteController extends Controller
 
     public function actionJobdetail($id)
     {
+
         $model = Job::findOne(['id' => $id]);
+        // $jobAll = Job::find()->orderBy('id DESC')->limit(6)->all();
+        $category = $model['category'];
+        $jobCategory = Job::find()->where(['category' => $category])->orderBy('id DESC')->limit(6)->all();
+        // var_dump($jobAll);die;
+
+        $jobs =[];
+        foreach ($jobCategory as $jobC) {
+            if ($jobC['id'] !== $model['id']) {
+              $jobs[] = $jobC;
+            }
+        }
+
+        // foreach ($jobAll as $jobA) {
+        //     if ($jobA=['id'] !== $model['id']) {
+        //       $jobs[] = $jobA;
+        //     }
+        // }
         return $this->renderPage('jobdetail', '','','','',[
             'model' => $model,
+            'jobs' => array_slice($jobs, 0, 5)
         ]);
     }
 
     public function actionApply()
     {
-        return $this->renderPage('apply');
+        return $this->renderPage('apply', '/build/script/upload.js');
+    }
+
+    public function actionTerms()
+    {
+        return $this->renderPage('terms');
+    }
+
+    public function actionPrivacy()
+    {
+        return $this->renderPage('privacy');
     }
 
     /**

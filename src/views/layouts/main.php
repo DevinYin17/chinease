@@ -52,13 +52,13 @@ use app\assets\AppAsset;
 
                         <ul class="sub-menu-list">
                             <li class="sub-menu-item">
-                                <a href="/site/job?type=internship">Internship</a>
+                                <a href="/site/job?key=category&value=Current Vacancy">Current Vacancy</a>
                             </li>
                             <li class="sub-menu-item">
-                                <a href="/site/job?type=graduate_scheme">Graduate Scheme</a>
+                                <a href="/site/job?key=category&value=Graduate Scheme">Graduate Scheme</a>
                             </li>
                             <li class="sub-menu-item">
-                                <a href="/site/job?type=social_recruitment">Social Recruitment</a>
+                                <a href="/site/job?key=category&value=Internship">Internship</a>
                             </li>
                         </ul>
                     </li>
@@ -87,19 +87,23 @@ use app\assets\AppAsset;
             <div class="tip">Please follow & like us :)</div>
             <ul class="attention-list">
               <li class="attention-item">
-                <a href="/"></a>
+                <a href="mailto:hello_chinease@outlook.com"></a>
               </li>
               <li class="attention-item">
-                <a href="/"></a>
+                <a href="https://m.facebook.com/Chinease.Ltd/" target="_blank"></a>
               </li>
               <li class="attention-item">
-                <a href="/"></a>
+                <a href="https://mobile.twitter.com/chinease_info" target="_blank"></a>
               </li>
               <li class="attention-item">
-                <a href="/"></a>
+                <a href="https://www.instagram.com/hello_chinease/" target="_blank"></a>
               </li>
             </ul>
             <div class="license">©2017 - <a href="/">Chinease Ltd</a></div>
+            <div class="legal">
+              <a href="/site/terms">Terms & Conditions</a>
+              <a href="/site/privacy">Privacy Policy</a>
+            </div>
         </footer>
 
         <section class="modal">
@@ -147,23 +151,24 @@ use app\assets\AppAsset;
             ]);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
-                // 'items' => [
-                //     ['label' => 'Home', 'url' => ['/site/index']],
-                //     ['label' => 'About', 'url' => ['/site/about']],
-                //     ['label' => 'Contact', 'url' => ['/site/contact']],
-                //     Yii::$app->user->isGuest ? (
-                //         ['label' => 'Login', 'url' => ['/site/login']]
-                //     ) : (
-                //         '<li>'
-                //         . Html::beginForm(['/site/logout'], 'post')
-                //         . Html::submitButton(
-                //             'Logout (' . Yii::$app->user->identity->username . ')',
-                //             ['class' => 'btn btn-link logout']
-                //         )
-                //         . Html::endForm()
-                //         . '</li>'
-                //     )
-                // ],
+                'items' => [
+                    ['label' => 'Resume', 'url' => ['/resume/index']],
+                    ['label' => 'Job', 'url' => ['/job/index']],
+                    ['label' => 'User', 'url' => ['/user/index']],
+                    ['label' => 'Message', 'url' => ['/message/index']],
+                    // Yii::$app->user->isGuest ? (
+                    //     ['label' => 'Login', 'url' => ['/site/login']]
+                    // ) : (
+                    //     '<li>'
+                    //     . Html::beginForm(['/site/logout'], 'post')
+                    //     . Html::submitButton(
+                    //         'Logout (' . Yii::$app->user->identity->username . ')',
+                    //         ['class' => 'btn btn-link logout']
+                    //     )
+                    //     . Html::endForm()
+                    //     . '</li>'
+                    // )
+                ],
             ]);
             NavBar::end();
             ?>

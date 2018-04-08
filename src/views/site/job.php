@@ -1,13 +1,13 @@
 <div class="job-wrapper job-container">
   <div class="container">
-    <h2>Current Vacancy</h2>
+    <h2></h2>
     <div class="header-tip">
       <span class="text">We are right here looking forward to help the first step of your adventure to China!</span>
 
       <div class="btn-right">
-        <input placeholder="category" class="cus-input">
-        <input placeholder="city" class="cus-input">
-        <span class="cus-btn">search</span>
+        <input placeholder="category" class="cus-input job-category">
+        <input placeholder="city" class="cus-input job-location">
+        <span class="cus-btn job-search">search</span>
       </div>
     </div>
 

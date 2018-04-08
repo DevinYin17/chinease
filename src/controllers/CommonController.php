@@ -5,9 +5,13 @@ use Yii;
 use yii\rest\Controller;
 use yii\helpers\Json;
 use app\models\User;
+use app\models\Message;
+use app\models\Resume;
+use app\models\Job;
 use app\components\BaseControllerTrait;
 use app\exceptions\InvalidParameterException;
 use yii\web\Cookie;
+use app\components\UploadHandler;
 
 class CommonController extends Controller
 {
@@ -46,6 +50,60 @@ class CommonController extends Controller
       $user['password'] = $params['password'];
       $user['isAdmin'] = 0;
       return $this->genToken($user);
+    }
+
+    public function actionMessage()
+    {
+      $model = new Message();
+      $params = $this->getParams();
+
+      if (!empty($params['message'])) {
+        $model['name'] = $params['name'];
+        $model['email'] = $params['email'];
+        $model['phone'] = $params['phone'];
+        $model['address'] = $params['address'];
+        $model['message'] = $params['message'];
+        $model['date'] = $params['date'];
+        //var_dump($model);die;
+        if ($model->save()) {
+          return $model;
+        }
+      } else {
+        throw new InvalidParameterException('error');
+      }
+    }
+
+    public function actionResume()
+    {
+      $model = new Resume();
+      $params = $this->getParams();
+
+
+      if (!empty($params['resume']) && !empty($params['job_id']) && !empty($params['user_id'])) {
+
+        $job = Job::findOne(['id' => $params['job_id']]);
+        $user = User::findOne(['id' => $params['user_id']]);
+        $user['resume'] = $params['resume'];
+        $user->save();
+
+        $model['job_id'] = $params['job_id'];
+        $model['user_id'] = $params['user_id'];
+        $model['resume'] = $params['resume'];
+        $model['email'] = $params['email'];
+        $model['date'] = $params['date'];
+        $model['name'] = $job['title'];
+
+        if ($model->save()) {
+          return $model;
+        }
+      } else {
+        throw new InvalidParameterException('resume error');
+      }
+    }
+
+    public function actionUpload()
+    {
+      $upload_handler = new UploadHandler();
     }
 
     private function genToken($user)

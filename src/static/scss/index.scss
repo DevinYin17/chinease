@@ -178,7 +178,7 @@
         flex-shrink: 0;
         margin-right: 50px;
 
-        video {
+        iframe {
           width: 100%;
         }
       }
@@ -197,16 +197,16 @@
           background-size: contain;
           background-position: left center;
 
-          &:nth-child(1) {
-            background-image: url('/build/images/index/food.png');
+          &.item-1 {
+            background-image: url('/build/images/index/food.jpeg');
           }
 
-          &:nth-child(2) {
-            background-image: url('/build/images/index/shup.png');
+          &.item-2 {
+            background-image: url('/build/images/index/shop.png');
           }
 
-          &:nth-child(3) {
-            background-image: url('/build/images/index/time.png');
+          &.item-3 {
+            background-image: url('/build/images/index/time.jpeg');
           }
         }
 

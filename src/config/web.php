@@ -50,7 +50,9 @@ $config = [
             'rules' => [
               'site/<action:[\w-]+>' => 'site/<action>',
               'user/<action:[\w-]+>' => 'user/<action>',
-              'job/<action:[\w-]+>' => 'job/<action>'
+              'job/<action:[\w-]+>' => 'job/<action>',
+              'resume/<action:[\w-]+>' => 'resume/<action>',
+              'message/<action:[\w-]+>' => 'message/<action>'
             ],
         ],
 

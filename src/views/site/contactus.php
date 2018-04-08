@@ -4,20 +4,26 @@
 
   <div class="container">
     <ul class="icon-list">
-      <li class="icon-item facebook">
-        Facebook
-        <p>@Chinease.Ltd</p>
-      </li>
+      <a href="https://m.facebook.com/Chinease.Ltd/" target="_blank">
+        <li class="icon-item facebook">
+          Facebook
+          <p>@Chinease.Ltd</p>
+        </li>
+      </a>
 
-      <li class="icon-item twitter">
-        Twitter
-        <p>@chinease_info</p>
-      </li>
+      <a href="https://mobile.twitter.com/chinease_info" target="_blank">
+        <li class="icon-item twitter">
+          Twitter
+          <p>@chinease_info</p>
+        </li>
+      </a>
 
-      <li class="icon-item instagram">
-        Instagram
-        <p>hello_chinease</p>
-      </li>
+      <a href="https://www.instagram.com/hello_chinease/" target="_blank">
+        <li class="icon-item instagram">
+          Instagram
+          <p>hello_chinease</p>
+        </li>
+      </a>
 
       <li class="icon-item tel">
         Telephone
@@ -43,10 +49,12 @@
         <p>9 a.m. - 5 p.m.</p>
       </li>
 
-      <li class="icon-item email">
-        Email
-        <p>hello@chinease.co.uk</p>
-      </li>
+      <a href="mailto:hello_chinease@outlook.com">
+        <li class="icon-item email">
+          Email
+          <p>hello_chinease@outlook.com</p>
+        </li>
+      </a>
     </ul>
 
     <div id="map" class="map"></div>

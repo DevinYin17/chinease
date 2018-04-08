@@ -10,10 +10,25 @@ footer {
   }
 
   .license {
-    margin-bottom: 70px;
-
     a {
       color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .legal {
+    margin: 10px 0 30px;
+
+    a {
+      color: $light;
+      padding: 0 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -50,5 +65,41 @@ footer {
       background-repeat: no-repeat;
       background-position: center;
     }
+  }
+}
+
+
+
+.article-wrapper {
+  padding: 70px 0;
+  font-size: 16px;
+  width: 800px !important;
+
+  h1 {
+    text-align: center;
+    margin: 40px 0 15px;
+  }
+
+  .desc {
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 25px;
+  }
+
+  p {
+    margin: 15px 0;
+    text-align: justify;
+    color: #555;
+
+    b {
+      font-size: 18px;
+      color: #000;
+    }
+  }
+
+  li {
+    list-style: disc;
   }
 }
