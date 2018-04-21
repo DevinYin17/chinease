@@ -1,7 +1,7 @@
 <div id="fullpage" class="index-wrapper">
   <section class="section page-one-2 text-center">
-    <h2>CHINEASE Limited Company</h2>
-    <h3>Ease your way teaching in China</h3>
+    <h2>CHIN<span class="blod">EASE LTD</span></h2>
+    <h3>Ease your way to teach in China</h3>
   </section>
 
   <section class="section page-one">
@@ -35,26 +35,40 @@
   <section class="section page-three">
     <h2>Application steps</h2>
     <div class="container step-list">
-      <div class="step-item">
-        <span class="index">1</span>
-        Talk to Us and Check Your Eligibility
-      </div>
-      <div class="step-item">
-        <span class="index">2</span>
-        Apply your favorite Position then take the initial video interview
-      </div>
-      <div class="step-item">
-        <span class="index">3</span>
-        Receiving an Offer after Passing the Interview
-      </div>
-      <div class="step-item">
-        <span class="index">4</span>
-        Visa Check and documents preparation
-      </div>
-      <div class="step-item">
-        <span class="index">5</span>
-        Welcome to China! Induction Week
-      </div>
+      <a href="/site/applicationprocess#1">
+        <div class="step-item">
+          <span class="index">1</span>
+          Talk to Us and Check Your Eligibility
+        </div>
+      </a>
+
+      <a href="/site/applicationprocess#2">
+        <div class="step-item">
+          <span class="index">2</span>
+          Apply your favorite Position then take the initial video interview
+        </div>
+      </a>
+
+      <a href="/site/applicationprocess#3">
+        <div class="step-item">
+          <span class="index">3</span>
+          Receiving an Offer after Passing the Interview
+        </div>
+      </a>
+
+      <a href="/site/applicationprocess#4">
+        <div class="step-item">
+          <span class="index">4</span>
+          Visa Check and documents preparation
+        </div>
+      </a>
+
+      <a href="/site/applicationprocess#5">
+        <div class="step-item">
+          <span class="index">5</span>
+          Welcome to China! Induction Week
+        </div>
+      </a>
     </div>
   </section>
 
@@ -101,35 +115,30 @@
 
   <section class="section page-four-2">
     <div class="container">
-      <div class="video">
+      <div class="video" id="video">
         <!-- <video controls>
           <source src="/build/images/index/movie.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video> -->
-        <iframe width="854" height="480" src="https://www.youtube.com/embed/W0SVb327Qqc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="video-youtube video-1" width="854" height="500" src="https://www.youtube.com/embed/W0SVb327Qqc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="video-youtube video-3" width="720" height="500" src="https://www.youtube.com/embed/wAEzpwvrveg?ecver=2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
 
       <div class="china">
-        <a href="https://www.youtube.com/watch?v=wAEzpwvrveg" target="_blank">
-          <div class="item item-1">
-            <label class="title">Chiese Food</label>
-            <label class="type">Product/Service Categories</label>
-          </div>
-        </a>
+        <div class="item item-1">
+          <label class="title">Chiese Food</label>
+          <label class="type">Product/Service Categories</label>
+        </div>
 
-        <a href="https://www.youtube.com/watch?v=wAEzpwvrveg" target="_blank">
-          <div class="item item-2">
-            <label class="title">Online shopping</label>
-            <label class="type">Product/Service Categories</label>
-          </div>
-        </a>
+        <div class="item item-2">
+          <label class="title">Online shopping</label>
+          <label class="type">Product/Service Categories</label>
+        </div>
 
-        <a href="https://www.youtube.com/watch?v=wAEzpwvrveg" target="_blank">
-          <div class="item item-3">
-            <label class="title">Reading time</label>
-            <label class="type">Product/Service Categories</label>
-          </div>
-        </a>
+        <div class="item item-3">
+          <label class="title">Reading time</label>
+          <label class="type">Product/Service Categories</label>
+        </div>
       </div>
     </div>
   </section>
@@ -171,6 +180,29 @@
       </form>
     </div>
   </section>
+
+  <footer class="section fp-auto-height">
+    <div class="tip">Please follow & like us :)</div>
+    <ul class="attention-list">
+      <li class="attention-item">
+        <a href="mailto:hello_chinease@outlook.com"></a>
+      </li>
+      <li class="attention-item">
+        <a href="https://m.facebook.com/Chinease.Ltd/" target="_blank"></a>
+      </li>
+      <li class="attention-item">
+        <a href="https://mobile.twitter.com/chinease_info" target="_blank"></a>
+      </li>
+      <li class="attention-item">
+        <a href="https://www.instagram.com/hello_chinease/" target="_blank"></a>
+      </li>
+    </ul>
+    <div class="license">©2018 - <a href="/">CHINEASE Ltd</a></div>
+    <div class="legal">
+      <a href="/site/terms">Terms & Conditions</a>
+      <a href="/site/privacy">Privacy Policy</a>
+    </div>
+  </footer>
 </div>
 
 <div class="modal fade" id="contactus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

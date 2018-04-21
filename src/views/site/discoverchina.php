@@ -1,6 +1,6 @@
 <div class="discover-wrapper">
   <div class="banner">
-    <h1>Chinease</h1>
+    <h1>CHINEASE</h1>
     <h3>Employment and relocation link for English language<br/>teachers looking to work in China</h3>
   </div>
 

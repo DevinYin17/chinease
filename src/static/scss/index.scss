@@ -27,8 +27,9 @@
 }
 
 .index-wrapper .page-one-2 h2 {
-  font-size: 55px;
-  padding: 18% 0 50px;
+  font-size: 76px;
+  padding: 0 0 50px;
+  font-weight: normal;
 }
 
 .index-wrapper {
@@ -181,6 +182,14 @@
         iframe {
           width: 100%;
         }
+
+        .video-youtube {
+          display: none;
+        }
+
+        .video-1 {
+          display: block;
+        }
       }
 
       .china {
@@ -196,6 +205,7 @@
           background-repeat: no-repeat;
           background-size: contain;
           background-position: left center;
+          cursor: pointer;
 
           &.item-1 {
             background-image: url('/build/images/index/food.jpeg');
@@ -371,5 +381,9 @@
         cursor: pointer;
       }
     }
+  }
+
+  .fp-auto-height {
+    border-top: 2px solid #fff;
   }
 }

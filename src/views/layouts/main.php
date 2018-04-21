@@ -99,7 +99,7 @@ use app\assets\AppAsset;
                 <a href="https://www.instagram.com/hello_chinease/" target="_blank"></a>
               </li>
             </ul>
-            <div class="license">©2017 - <a href="/">Chinease Ltd</a></div>
+            <div class="license">©2018 - <a href="/">CHINEASE Ltd</a></div>
             <div class="legal">
               <a href="/site/terms">Terms & Conditions</a>
               <a href="/site/privacy">Privacy Policy</a>

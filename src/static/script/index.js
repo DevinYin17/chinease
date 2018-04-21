@@ -51,5 +51,16 @@ $(function() {
     }
   });
 
+  $('.page-four-2 .item').on('click', function() {
+    var $video = $('.video-' + ($(this).index() + 1));
 
+    if ($video && $video.length) {
+      $('.video-youtube').each(function(index, item){
+        item.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      });
+      $('.video-youtube').hide();
+
+      $video.show();
+    }
+  });
 });
