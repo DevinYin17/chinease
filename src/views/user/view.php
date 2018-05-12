@@ -10,6 +10,13 @@ $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<style>
+
+.breadcrumb {
+  padding-top: 80px;
+}
+
+</style>
 <div class="user-view">
 
     <h1><?= Html::encode($this->title) ?></h1>

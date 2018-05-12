@@ -12,6 +12,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <style>
+
+.breadcrumb {
+  padding-top: 80px;
+}
+
 .resume-search .form-group {
   display: inline-block;
   width: 150px;

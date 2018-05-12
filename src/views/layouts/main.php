@@ -138,6 +138,18 @@ use app\assets\AppAsset;
             <div class="tip">Other chinease.co.uk services</div>
           </div>
         </section>
+        <script type="text/javascript">
+        _linkedin_data_partner_id = "357514";
+        </script><script type="text/javascript">
+        (function(){var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";b.async = true;
+        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);})();
+        </script>
+        <noscript>
+        < img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=357514&fmt=gif" />
+        </noscript>
 
     <?php } else { ?>
         <div class="wrap">
@@ -156,6 +168,7 @@ use app\assets\AppAsset;
                     ['label' => 'Job', 'url' => ['/job/index']],
                     ['label' => 'User', 'url' => ['/user/index']],
                     ['label' => 'Message', 'url' => ['/message/index']],
+                    ['label' => 'Statistics', 'url' => ['/message/statistics']],
                     // Yii::$app->user->isGuest ? (
                     //     ['label' => 'Login', 'url' => ['/site/login']]
                     // ) : (

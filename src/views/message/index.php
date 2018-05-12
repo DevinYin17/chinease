@@ -11,6 +11,10 @@ $this->title = 'Messages';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
+.breadcrumb {
+  padding-top: 80px;
+}
+
 .message-search .form-group {
   display: inline-block;
   width: 150px;
@@ -27,10 +31,6 @@ td {
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Message', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

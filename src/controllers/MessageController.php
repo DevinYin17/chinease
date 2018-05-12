@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\components\BaseControllerTrait;
 use app\exceptions\InvalidParameterException;
+use app\models\Statistics;
 
 /**
  * MessageController implements the CRUD actions for Message model.
@@ -118,6 +119,14 @@ class MessageController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionStatistics()
+    {
+      $model = Statistics::find()->orderBy('id ASC')->all();
+      return $this->render('statistics', [
+          'model' => $model,
+      ]);
     }
 
     /**

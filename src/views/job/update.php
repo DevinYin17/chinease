@@ -10,6 +10,13 @@ $this->params['breadcrumbs'][] = ['label' => 'Jobs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
+<style>
+
+.breadcrumb {
+  padding-top: 80px;
+}
+
+</style>
 <div class="job-update">
 
     <h1><?= Html::encode($this->title) ?></h1>

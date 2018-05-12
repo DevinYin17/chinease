@@ -11,6 +11,11 @@ $this->params['breadcrumbs'][] = ['label' => 'Jobs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
+
+.breadcrumb {
+  padding-top: 80px;
+}
+
 .bar {
     height: 18px;
     background: green;
@@ -23,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div id="progress">
         <div class="bar" style="width: 0%;"></div>
     </div>
-    
+
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
