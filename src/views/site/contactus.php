@@ -27,7 +27,7 @@
 
       <li class="icon-item tel">
         Telephone
-        <p>+44 (0)121 *** ****</p>
+        <p>+44 7378448588</p>
       </li>
 
       <li class="icon-item skype">
@@ -49,10 +49,10 @@
         <p>9 a.m. - 5 p.m.</p>
       </li>
 
-      <a href="mailto:hello_chinease@outlook.com">
+      <a href="mailto:info@chinease.co.uk">
         <li class="icon-item email">
           Email
-          <p>hello_chinease@outlook.com</p>
+          <p>info@chinease.co.uk</p>
         </li>
       </a>
     </ul>

@@ -90,7 +90,7 @@ class SiteController extends Controller
 
             $sta_media_y_m->save();
           }
-          
+
         }
 
         return true;
@@ -232,7 +232,7 @@ class SiteController extends Controller
 
         $description = self::DEFAULT_DESCRIPTION;
         $keywords = self::DEFAULT_KEYWORDS;
-        $title = 'Chinease | Teaching in China';
+        $title = 'Chinease | looking to teach in China';
         if (!empty($descriptionCus)) {
             $description = $descriptionCus;
         }

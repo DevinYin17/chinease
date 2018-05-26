@@ -37,4 +37,14 @@
     background-color: $dark;
     border-bottom: 1px solid #fff;
   }
+
+  .job-banner {
+    position: relative;
+  }
+
+  .next-icon {
+    position: absolute;
+    background-color: transparent;
+    bottom: 10px;
+  }
 }

@@ -47,6 +47,8 @@
         <span class="number">198</span>
       </li>
     </ul>
+
+    <i class="next-icon"></i>
   </div>
 
   <ul class="type-list container">
@@ -76,7 +78,7 @@
             <i class="logo job1" style="background-image: url(<?= $job['pic']?>)"></i>
             <div class="desc">
               <label class="name"><?= $job['title']?></label>
-              <span class="info"><?= $job['base_type']?></span>
+              <span class="info"><?= $job['base_title']?></span>
               <span class="info"><?= $job['salary']?></span>
               <span class="info"><?= $job['base_location']?></span>
             </div>

@@ -8,10 +8,21 @@ $(function() {
         resize: true,
         paddingTop: '70px',
         responsiveWidth: 1200,
-        slidesNavigation: true
+        slidesNavigation: true,
+        onLeave: function(index, nextIndex, direction) {
+          if (nextIndex === 8) {
+            $('.next-icon').hide();
+          } else {
+            $('.next-icon').show();
+          }
+        }
       };
 
       $fullPage.fullpage(options);
+
+      $('.next-icon').on('click', function() {
+        $.fn.fullpage.moveSectionDown();
+      });
     }
   }
 

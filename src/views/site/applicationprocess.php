@@ -17,7 +17,7 @@
   <section class="step">
     <div class="content">
       <h3>Apply your favorite Position then take the initial video interview</h3>
-      When you are ready, simply Apply Online or send your brilliant CV and Cover Letter to: info@chinease.co.uk
+      When you are ready, simply Apply Online or send your brilliant CV and Cover Letter to: <a href="mailto:info@chinease.co.uk">info@chinease.co.uk</a>
       <br/>
       Depend on each position, Candidate may be ask to attend an online video interview, which lasts approximately 15-30 minutes.
     </div>

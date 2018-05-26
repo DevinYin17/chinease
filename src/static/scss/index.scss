@@ -387,3 +387,43 @@
     border-top: 2px solid #fff;
   }
 }
+
+.next-icon {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, .5);
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transform: rotate(45deg);
+    transform-origin: center;
+    animation: next .8s ease-in-out alternate infinite;
+    opacity: .7;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@keyframes next {
+    100% {
+        top: 20px
+    }
+}
