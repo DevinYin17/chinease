@@ -17,15 +17,13 @@
   <section class="section page-two">
     <div class="container">
       <div class="left">
-        <h2>Why Choose CHINEASE?</h2>
+        <h2>About CHINEASE LTD</h2>
         <p>
-          Chinease LTD. is an international recruitment specialist registered in the UK.<br/>
-          We work with top Chinese & British employers and Universities to provide Teaching Jobs, Work Opportunities, Internships and Graduate Programmes for UK graduates and teachers to work abroad in China.
+          CHINEASE LTD is an international education company registered in UK. We work with Chinese and British institutions and universities to provide teaching positions, internships and graduate schemes for English students and teachers to work abroad in China.
         </p>
 
         <p>
-          Our team have education background in the UK and understand the local culture for 5 years, so we have extensive knowledge of the UK education system and Graduate Scheme. We have a very strong connection with Chinese universities and institutions. If you have any question, just feel free to contact us.<br/>
-          We are right here looking forward to help the first step of your adventure to China!
+          We are different from the traditional headhunting company is that we not only provide a large number of high-quality working opportunities but also one-stop humanized services. We monitor from the candidate resume screening to the final entry process without any concern of candidates. In addition, our Chinese departments will be post-entry docking and care, to provide full range of services. Which is to let the candidates know and understand the Chinese culture and integrate into the local environment better.
         </p>
       </div>
       <div class="right">Our application service is totally Free for the candidate!!!</div>
@@ -127,7 +125,7 @@
 
       <div class="china">
         <div class="item item-1">
-          <label class="title">Chiese Food</label>
+          <label class="title">Chinese Food</label>
           <label class="type">Product/Service Categories</label>
         </div>
 
