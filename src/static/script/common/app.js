@@ -318,6 +318,9 @@ $(function() {
         base_location: 'City'
       }
       $('.job-wrapper h2').html(type[getQueryString('key')] + ': ' + (getQueryString('value') || 'all'));
+      if ((getQueryString('value') || '').toLowerCase().indexOf('current') > -1) {
+        $('.job-wrapper .header-tip .text').removeClass('hide');
+      }
     }
   }
 

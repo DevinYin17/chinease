@@ -2,7 +2,7 @@
   <div class="container">
     <h2></h2>
     <div class="header-tip">
-      <span class="text" style="font-size:18px;">
+      <span class="text hide" style="font-size:18px;">
         If you are fluent English speaker and hold bachelor degree or above</br>
         If you want to travel around China when you are off work</br>
         If you want to join an experienced foreign teacher group</br>
