@@ -64,7 +64,7 @@
 
         <div class="basic-item l">
           <div class="basic-title">Work type:</div>
-          <div class="basic-info"><?= $this->params['model']['base_title'] ?></div>
+          <div class="basic-info"><?= $this->params['model']['base_type'] ?></div>
         </div>
 
         <div class="basic-item xl">

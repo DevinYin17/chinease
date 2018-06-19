@@ -56,11 +56,11 @@
     <div class="upload job-apply">upload cv</div>
     <p class="desc">
       Creating a resume means that you agree to the terms of service, Cookie agreement<br/>
-      and privacy agreement, and agree to the employer. Contact you.
+      and privacy agreement, and agree to the employer.
     </p>
     <span class="link">
       Already have an account?
-      <a href="javascript:void:0;">Then login</a>
+      <a class="signup" href="javascript:void:0;">Then login</a>
     <span>
   </div>
 </div>

@@ -67,7 +67,8 @@ class ResumeSearch extends Resume
             ->andFilterWhere(['like', 'resume', $this->resume])
             ->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'date', $this->date]);
+            ->andFilterWhere(['like', 'date', $this->date])
+            ->orderBy('id DESC');
 
         return $dataProvider;
     }

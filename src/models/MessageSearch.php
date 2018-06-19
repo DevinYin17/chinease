@@ -67,7 +67,8 @@ class MessageSearch extends Message
             ->andFilterWhere(['like', 'phone', $this->phone])
             ->andFilterWhere(['like', 'address', $this->address])
             ->andFilterWhere(['like', 'message', $this->message])
-            ->andFilterWhere(['like', 'date', $this->date]);
+            ->andFilterWhere(['like', 'date', $this->date])
+            ->orderBy('id DESC');
 
         return $dataProvider;
     }

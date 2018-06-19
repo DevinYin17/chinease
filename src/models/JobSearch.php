@@ -75,7 +75,8 @@ class JobSearch extends Job
             ->andFilterWhere(['like', 'salary', $this->salary])
             ->andFilterWhere(['like', 'information', $this->information])
             ->andFilterWhere(['like', 'requirement', $this->requirement])
-            ->andFilterWhere(['like', 'responsibility', $this->responsibility]);
+            ->andFilterWhere(['like', 'responsibility', $this->responsibility])
+            ->orderBy('id DESC');
 
         return $dataProvider;
     }
