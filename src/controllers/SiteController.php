@@ -126,7 +126,7 @@ class SiteController extends Controller
 
     public function actionJobvacancy()
     {
-        $model = Job::find()->all();
+        $model = Job::find()->orderBy('id DESC')->all();
         return $this->renderPage('jobvacancy', '','CHINEASE LTD provides various kinds of teaching positions, graduate scheme and internship for teachers and students.','teaching positions, graduate scheme, internship, china','',[
             'model' => $model,
         ]);

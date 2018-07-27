@@ -150,6 +150,26 @@ li {
       border: 1px solid #e1e1e1;
       cursor: pointer;
       margin-bottom: 32px;
+      overflow: hidden;
+      position: relative;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        &::before {
+          content: 'NEW';
+          position: absolute;
+          font-size: 8px;
+          line-height: 20px;
+          color: #fff;
+          background-color: red;
+          width: 130px;
+          right: 0;
+          top: 0;
+          transform: rotate(45deg) translateX(30%) translateY(-100%);
+        }
+      }
 
       &.empty {
         height: 0;
