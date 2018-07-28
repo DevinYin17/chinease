@@ -47,7 +47,6 @@ $(function() {
     slidesPerView: 5,
     spaceBetween: 75,
     loop: true,
-    autoplay: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

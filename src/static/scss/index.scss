@@ -33,6 +33,190 @@
 }
 
 .index-wrapper {
+  .page-one-2 {
+    .job-category {
+      width: 600px;
+      font-size: 24px;
+      border: 0;
+      padding: 20px 50px;
+      border-radius: 34px;
+      margin: 70px 0 30px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .job-search {
+      display: block;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 40px;
+      width: 200px;
+      text-align: center;
+      background-color: #f60;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f70;
+      }
+    }
+  }
+
+  .page-6 {
+    h2 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #000;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #777;
+      margin-bottom: 50px;
+    }
+
+    .swiper-container {
+      padding: 0 150px;
+    }
+
+    .swiper-container,
+    .swiper-wrapper,
+    .swiper-slide {
+      height: 300px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      margin: 0;
+      width: 150px;
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      background-image: url('/build/images/index/left.png');
+    }
+
+    .swiper-button-next {
+      right: 0;
+      background-image: url('/build/images/index/right.png');
+    }
+
+    .swiper-slide {
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &.kuangye {
+        background-image: url('/build/images/index/kuangye.png');
+      }
+
+      &.huaihai {
+        background-image: url('/build/images/index/huaihai.png');
+      }
+
+      &.qiqi {
+        background-image: url('/build/images/index/qiqi.png');
+      }
+
+      &.wuyue {
+        background-image: url('/build/images/index/wuyue.png');
+      }
+    }
+
+    .school {
+      display: block;
+      width: 120px;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      &.school-1 {
+        background-image: url('/build/images/index/school1.jpg');
+      }
+
+      &.school-2 {
+        background-image: url('/build/images/index/school2.jpg');
+      }
+
+      &.school-3 {
+        background-image: url('/build/images/index/school3.jpg');
+      }
+
+      &.school-4 {
+        background-image: url('/build/images/index/school4.jpg');
+      }
+
+      &.school-5 {
+        background-image: url('/build/images/index/school5.jpg');
+      }
+
+      &.school-6 {
+        background-image: url('/build/images/index/school6.jpg');
+      }
+
+      &.school-7 {
+        background-image: url('/build/images/index/school7.jpg');
+      }
+
+      &.school-8 {
+        background-image: url('/build/images/index/school8.jpg');
+      }
+
+      &.school-9 {
+        background-image: url('/build/images/index/school9.jpg');
+      }
+
+      &.school-10 {
+        background-image: url('/build/images/index/school10.jpg');
+      }
+
+      &.school-11 {
+        background-image: url('/build/images/index/school11.jpg');
+      }
+
+      &.school-12 {
+        background-image: url('/build/images/index/school12.jpg');
+      }
+
+      &.school-13 {
+        background-image: url('/build/images/index/school13.jpg');
+      }
+
+      &.school-14 {
+        background-image: url('/build/images/index/school14.jpg');
+      }
+
+      &.school-15 {
+        background-image: url('/build/images/index/school15.jpg');
+      }
+
+      &.school-16 {
+        background-image: url('/build/images/index/school16.jpg');
+      }
+
+      &.school-17 {
+        background-image: url('/build/images/index/school17.jpg');
+      }
+
+      &.school-18 {
+        background-image: url('/build/images/index/school18.jpg');
+      }
+    }
+  }
+}
+
+.index-wrapper {
   background-color: #fff;
 
   .page-one {
@@ -46,7 +230,7 @@
 
     h3 {
       margin: 10px 0 70px;
-      font-size: 14px;
+      font-size: 18px;
       color: #454b55;
     }
 
@@ -254,64 +438,6 @@
     .job-list,
     .job-item {
       margin: 0 !important;
-    }
-
-    .swiper-container,
-    .swiper-wrapper,
-    .swiper-slide {
-      height: 110px;
-    }
-
-    .swiper-container {
-      padding: 0 150px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      height: 110px;
-      margin: 0;
-      width: 80px;
-      background-color: #114974;
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: 1;
-      cursor: pointer;
-    }
-
-    .swiper-button-prev {
-      left: 0;
-      border-right: 70px solid $dark;
-      background-image: url('/build/images/index/left.png');
-    }
-
-    .swiper-button-next {
-      right: 0;
-      border-left: 70px solid $dark;
-      background-image: url('/build/images/index/right.png');
-    }
-
-    .swiper-slide {
-      background-repeat: no-repeat;
-      background-position: center;
-
-      &.kuangye {
-        background-image: url('/build/images/index/kuangye.png');
-      }
-
-      &.huaihai {
-        background-image: url('/build/images/index/huaihai.png');
-      }
-
-      &.qiqi {
-        background-image: url('/build/images/index/qiqi.png');
-      }
-
-      &.wuyue {
-        background-image: url('/build/images/index/wuyue.png');
-      }
     }
   }
 

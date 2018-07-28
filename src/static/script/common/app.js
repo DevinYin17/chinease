@@ -294,14 +294,20 @@ $(function() {
   function initJobSearch() {
     if ($('.job-search') && $('.job-search').length) {
       $('.job-search').on('click', function() {
-        var category = $(this).parent().find('.job-category').val().trim();
-        var location = $(this).parent().find('.job-location').val().trim();
+        var category = $(this).parent().find('.job-category');
+        var location = $(this).parent().find('.job-location');
+        if (category && category.length) {
+          category = category.val().trim()
+        }
+        if (location && location.length) {
+          location = location.val().trim()
+        }
 
         setTimeout(function() {
-          if (category) {
+          if (category && category.length) {
             window.open('/site/job?key=category&value=' + category, '_self');
             // location.href = '/site/job?key=category&value=' + category;
-          } else if (location) {
+          } else if (location && location.length) {
             window.open('/site/job?key=base_location&value=' + location, '_self');
             // location.href = '/site/job?key=base_location&value=' + location;
           }

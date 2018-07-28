@@ -1,7 +1,90 @@
 <div id="fullpage" class="index-wrapper">
   <section class="section page-one-2 text-center">
-    <h2>CHIN<span class="blod">EASE LTD</span></h2>
+    <h2>Ease your way to teach in China</h2>
+    <h3>Find and apply to your dream job in China</h3>
+    <h3>through our free personalised application service</h3>
+    <input class="job-category" />
+    <span class="job-search">Search Job</span>
+  </section>
+
+  <section class="section page-6 text-center">
+    <h2>Schools we cooperated with</h2>
     <h3>Ease your way to teach in China</h3>
+
+    <div class="container">
+      <div class="swiper-container schools">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <i class="school school-1"></i>
+            <i class="school school-2"></i>
+          </div>
+          <div class="swiper-slide">
+            <i class="school school-3"></i>
+            <i class="school school-4"></i>
+          </div>
+          <div class="swiper-slide">
+            <i class="school school-5"></i>
+            <i class="school school-6"></i>
+          </div>
+          <div class="swiper-slide">
+            <i class="school school-7"></i>
+            <i class="school school-8"></i>
+          </div>
+          <div class="swiper-slide">
+            <i class="school school-9"></i>
+            <i class="school school-10"></i>
+          </div>
+          <div class="swiper-slide">
+            <i class="school school-11"></i>
+            <i class="school school-12"></i>
+          </div>
+          <div class="swiper-slide">
+            <i class="school school-13"></i>
+            <i class="school school-14"></i>
+          </div>
+          <div class="swiper-slide">
+            <i class="school school-15"></i>
+            <i class="school school-16"></i>
+          </div>
+          <div class="swiper-slide">
+            <i class="school school-17"></i>
+            <i class="school school-18"></i>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-four">
+    <h2>The cooperation unit</h2>
+
+    <div class="container">
+      <div class="job-container">
+        <ul class="job-list">
+
+          <?php foreach ($this->params['model'] as $job) {
+            ?>
+            <a class="job-item" href="/site/jobdetail?id=<?= $job['id']?>">
+              <i class="logo job1" style="background-image: url(<?= $job['pic']?>)"></i>
+              <div class="desc">
+                <label class="name"><?= $job['title']?></label>
+                <span class="info"><?= $job['base_title']?></span>
+                <span class="info"><?= $job['salary']?></span>
+                <span class="info"><?= $job['base_location']?></span>
+              </div>
+            </a>
+              <?php
+          } ?>
+
+          <i class="job-item empty"></i>
+          <i class="job-item empty"></i>
+          <i class="job-item empty"></i>
+
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="section page-one">
@@ -14,7 +97,38 @@
     </div>
   </section>
 
-  <section class="section page-two">
+  <section class="section page-four-2">
+    <div class="container">
+      <div class="video" id="video">
+        <!-- <video controls>
+          <source src="/build/images/index/movie.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> -->
+        <iframe class="video-youtube video-1" width="854" height="500" src="https://www.youtube.com/embed/W0SVb327Qqc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="video-youtube video-2" width="889" height="500" src="https://www.youtube.com/embed/JmiKWTRoiMk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="video-youtube video-3" width="720" height="500" src="https://www.youtube.com/embed/wAEzpwvrveg?ecver=2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+
+      <div class="china">
+        <div class="item item-1">
+          <label class="title">Chinese Food</label>
+          <label class="type">Product/Service Categories</label>
+        </div>
+
+        <div class="item item-2">
+          <label class="title">Online shopping</label>
+          <label class="type">Product/Service Categories</label>
+        </div>
+
+        <div class="item item-3">
+          <label class="title">Reading time</label>
+          <label class="type">Product/Service Categories</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section page-two">
     <div class="container">
       <div class="left">
         <h2>About CHINEASE LTD</h2>
@@ -28,7 +142,7 @@
       </div>
       <div class="right">Our application service is totally Free for the candidate!!!</div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section page-three">
     <h2>Application steps</h2>
@@ -67,78 +181,6 @@
           Welcome to China! Induction Week
         </div>
       </a>
-    </div>
-  </section>
-
-  <section class="section page-four">
-    <h2>The cooperation unit</h2>
-
-    <div class="container">
-      <div class="job-container">
-        <ul class="job-list">
-
-          <?php foreach ($this->params['model'] as $job) {
-            ?>
-            <a class="job-item" href="/site/jobdetail?id=<?= $job['id']?>">
-              <i class="logo job1" style="background-image: url(<?= $job['pic']?>)"></i>
-              <div class="desc">
-                <label class="name"><?= $job['title']?></label>
-                <span class="info"><?= $job['base_title']?></span>
-                <span class="info"><?= $job['salary']?></span>
-                <span class="info"><?= $job['base_location']?></span>
-              </div>
-            </a>
-              <?php
-          } ?>
-
-          <i class="job-item empty"></i>
-          <i class="job-item empty"></i>
-          <i class="job-item empty"></i>
-
-        </ul>
-      </div>
-
-      <div class="swiper-container schools">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide kuangye"></div>
-          <div class="swiper-slide huaihai"></div>
-          <div class="swiper-slide qiqi"></div>
-          <div class="swiper-slide wuyue"></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section page-four-2">
-    <div class="container">
-      <div class="video" id="video">
-        <!-- <video controls>
-          <source src="/build/images/index/movie.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video> -->
-        <iframe class="video-youtube video-1" width="854" height="500" src="https://www.youtube.com/embed/W0SVb327Qqc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <iframe class="video-youtube video-2" width="889" height="500" src="https://www.youtube.com/embed/JmiKWTRoiMk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <iframe class="video-youtube video-3" width="720" height="500" src="https://www.youtube.com/embed/wAEzpwvrveg?ecver=2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-
-      <div class="china">
-        <div class="item item-1">
-          <label class="title">Chinese Food</label>
-          <label class="type">Product/Service Categories</label>
-        </div>
-
-        <div class="item item-2">
-          <label class="title">Online shopping</label>
-          <label class="type">Product/Service Categories</label>
-        </div>
-
-        <div class="item item-3">
-          <label class="title">Reading time</label>
-          <label class="type">Product/Service Categories</label>
-        </div>
-      </div>
     </div>
   </section>
 
