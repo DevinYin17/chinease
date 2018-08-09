@@ -214,6 +214,66 @@
       }
     }
   }
+
+  .page-7 {
+    background-color: #000435;
+
+    h2 {
+      font-size: 30px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .feedback {
+      display: flex;
+      justify-content: space-between;
+
+      .p {
+        position: relative;
+        padding: 30px 20px 30px 180px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 28px;
+        width: 440px;
+        opacity: .9;
+        height: fit-content;
+
+        .name {
+          text-align: right;
+          text-decoration: underline;
+          margin-top: 20px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &:nth-child(1)::before {
+          background-image: url('/build/images/index/feedback_1.png');
+          background-position: left -250px top;
+          background-size: 700px;
+        }
+
+        &:nth-child(2)::before {
+          background-image: url('/build/images/index/feedback_2.jpg');
+          background-size: 160px;
+          background-position: left top 85px;
+        }
+
+        &:nth-child(2) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
 }
 
 .index-wrapper {

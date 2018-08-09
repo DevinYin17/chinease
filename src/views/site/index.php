@@ -144,6 +144,32 @@
     </div>
   </section> -->
 
+  <section class="section page-7">
+    <div class="container">
+      <h2>Helping hundreds of teachers realise their dreams in China</h2>
+      <div class="feedback">
+        <div class="p">
+          I have been teaching in China for nearly 4 months now and am thoroughly enjoying the experience. I am grateful to Tony and CHINEASE LTD for introducing me to the university and supporting me through the application process. Tony has always been on hand to answer any questions I have. When you are living and working abroad and don’t know the local language, it is reassuring to know that help is available and Tony has been approachable, reliable and honest.
+          <div class="name">
+            -- Michlle, UK
+          </div>
+        </div>
+
+        <div class="p">
+          <!-- To whom it may concern,<br/><br/> -->
+          <!-- As program manager of the office of International Exchange and Operation, Huaihai Institute of Technology, China, it is my sincere and distinct pleasure to recommend CHINEASE LTD’s Foreign teacher recruitment service to other universities/schools. <br/><br/> -->
+          They not only helped us recruit qualified foreign teachers but also assisted the foreign teachers in handling the relevant documents for Chinese Working Visa. Which is point that we are most grateful to CHINEASE LTD. In addition, they are also responsible for the follow-up of foreign teachers’ living and working in China. Based on the good foundation of cooperation before us, we can safely delegate this business to them. Therefore, I sincerely recommend CHINEASE to foreign teachers who want to go to China and many universities or schools in China.
+          <!-- Thank you.  Sincerely,  Chen Qian <br/> -->
+          <!-- office of International Exchange and Operation<br/> -->
+          <!-- Huaihai Institute of Technology, China<br/> -->
+          <div class="name">
+            -- Huaihai Institute of Technology, China
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section page-three">
     <h2>Application steps</h2>
     <div class="container step-list">
