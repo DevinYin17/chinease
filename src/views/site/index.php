@@ -58,7 +58,7 @@
   </section>
 
   <section class="section page-four">
-    <h2>The cooperation unit</h2>
+    <h2>Featured Jobs</h2>
 
     <div class="container">
       <div class="job-container">
@@ -85,6 +85,10 @@
         </ul>
       </div>
     </div>
+
+    <div class="align-right container">
+      <a class="read-more" href="/site/jobvacancy">Read More -></a>
+    </div>
   </section>
 
   <section class="section page-one">
@@ -98,6 +102,7 @@
   </section>
 
   <section class="section page-four-2">
+    <h2>Discover China</h2>
     <div class="container">
       <div class="video" id="video">
         <!-- <video controls>
@@ -111,16 +116,19 @@
 
       <div class="china">
         <div class="item item-1">
+          <i></i>
           <label class="title">Chinese Food</label>
           <label class="type">Product/Service Categories</label>
         </div>
 
         <div class="item item-2">
+          <i></i>
           <label class="title">Online shopping</label>
           <label class="type">Product/Service Categories</label>
         </div>
 
         <div class="item item-3">
+          <i></i>
           <label class="title">Reading time</label>
           <label class="type">Product/Service Categories</label>
         </div>
@@ -146,12 +154,12 @@
 
   <section class="section page-7">
     <div class="container">
-      <h2>Helping hundreds of teachers realise their dreams in China</h2>
+      <h2>What makes CHINEASE LTD stand out</h2>
       <div class="feedback">
         <div class="p">
           I have been teaching in China for nearly 4 months now and am thoroughly enjoying the experience. I am grateful to Tony and CHINEASE LTD for introducing me to the university and supporting me through the application process. Tony has always been on hand to answer any questions I have. When you are living and working abroad and don’t know the local language, it is reassuring to know that help is available and Tony has been approachable, reliable and honest.
           <div class="name">
-            -- Michlle, UK
+            -- Michelle, UK
           </div>
         </div>
 

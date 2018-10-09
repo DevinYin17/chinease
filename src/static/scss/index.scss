@@ -65,7 +65,7 @@
 
   .page-6 {
     h2 {
-      font-size: 24px;
+      font-size: 30px;
       font-weight: normal;
       color: #000;
     }
@@ -234,14 +234,17 @@
         color: #fff;
         font-size: 20px;
         line-height: 28px;
-        width: 440px;
+        width: 400px;
+        height: 430px;
         opacity: .9;
-        height: fit-content;
+        // height: fit-content;
+        text-align: justify;
 
         .name {
-          text-align: right;
+          position: absolute;
+          right: 0;
+          bottom: 0;
           text-decoration: underline;
-          margin-top: 20px;
         }
 
         &::before {
@@ -343,7 +346,7 @@
           color: $light;
           margin-bottom: 70px;
           padding: 0 20px 20px 0;
-          border-bottom: 2px solid $light;
+          // border-bottom: 2px solid $light;
         }
 
         p {
@@ -374,7 +377,7 @@
       font-size: 30px;
       padding: 20px;
       color: $light;
-      border-bottom: 2px solid $light;
+      // border-bottom: 2px solid $light;
     }
 
     .step-list {
@@ -414,6 +417,13 @@
   }
 
   .page-four-2 {
+    h2 {
+      font-size: 30px;
+      color: #000;
+      text-align: center;
+      padding-bottom: 50px;
+    }
+
     .container {
       display: flex;
       flex-wrap: nowrap;
@@ -443,11 +453,12 @@
         justify-content: space-around;
 
         .item {
+          position: relative;
           height: 120px;
           padding-left: 230px;
           padding-top: 15px;
           background-repeat: no-repeat;
-          background-size: contain;
+          background-size: 50% 100%;
           background-position: left center;
           cursor: pointer;
 
@@ -461,6 +472,33 @@
 
           &.item-3 {
             background-image: url('/build/images/index/time.jpeg');
+          }
+
+          &:hover {
+            i {
+              position: absolute;
+              left: 20%;
+              top: 50%;
+              transform: translateY(-50%);
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: rgba(255, 255, 255, .6);
+
+              &::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 16px solid #fff;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                left: 56%;
+                top: 50%;
+                transform: translateY(-50%) translateX(-50%);
+              }
+            }
           }
         }
 
@@ -488,7 +526,7 @@
       font-size: 30px;
       color: #eefdff;
       padding: 20px;
-      border-bottom: 2px solid #eefdff;
+      // border-bottom: 2px solid #eefdff;
     }
 
     .job-container {
@@ -506,11 +544,11 @@
     background-color: $dark;
 
     h2 {
-      font-size: 24px;
+      font-size: 30px;
       padding: 10px;
       color: #eefdff;
       display: inline-block;
-      border-bottom: 2px solid #eefdff;
+      // border-bottom: 2px solid #eefdff;
     }
 
     h3 {
@@ -612,4 +650,17 @@
     100% {
         top: 20px
     }
+}
+
+.align-right {
+  text-align: right;
+
+  .read-more {
+    font-size: 18px;
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

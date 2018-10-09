@@ -33,6 +33,11 @@ $(function() {
       zoom: 14
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
+    new google.maps.Marker({
+      position: new google.maps.LatLng(54.976488, -1.606866),
+      title: "Chinease",
+      map: map,
+    })
   }
 
   function init() {
@@ -47,6 +52,7 @@ $(function() {
     slidesPerView: 5,
     spaceBetween: 75,
     loop: true,
+    autoplay: 3000,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
