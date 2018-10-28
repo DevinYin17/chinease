@@ -179,7 +179,7 @@
   </section>
 
   <section class="section page-three">
-    <h2>Application steps</h2>
+    <h2>Application Process</h2>
     <div class="container step-list">
       <a href="/site/applicationprocess#1">
         <div class="step-item">

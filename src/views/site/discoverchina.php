@@ -16,7 +16,7 @@
 
   <div class="cover-list container">
     <div class="cover-item size-l">
-      Chiese Food
+      Chinese Food
       <div class="text">
         <p>China is rich in tourist attractions. Delicious foods are an attraction indispensable in a good tour. With a long history, unique features, numerous styles and exquisite cooking, Chinese cuisine is one important constituent part of Chinese culture. Chinese dishes are famous for color, aroma, taste, meaning and appearance.</p>
       </div>
