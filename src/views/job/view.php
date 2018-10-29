@@ -50,6 +50,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'information',
             'requirement',
             'responsibility',
+            'image_1',
+            'image_2',
+            'image_3',
+            'image_4',
+            'image_5',
+            'image_6',
         ],
     ]) ?>
 

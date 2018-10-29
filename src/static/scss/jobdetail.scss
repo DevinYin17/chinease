@@ -121,4 +121,18 @@
       padding-bottom: 20px;
     }
   }
+
+  .detail-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .detail-item {
+    width: 350px;
+    height: 350px;
+    margin-top: 38px;
+    background-size: cover;
+    background-position: center;
+  }
 }

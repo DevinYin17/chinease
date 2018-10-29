@@ -39,7 +39,7 @@ class Job extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['pic', 'title', 'category', 'base_title', 'base_type', 'base_group', 'base_location'], 'string', 'max' => 200],
+            [['pic', 'title', 'category', 'base_title', 'base_type', 'base_group', 'base_location', 'image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6'], 'string', 'max' => 200],
             [['date', 'author', 'salary'], 'string', 'max' => 50],
             [['benefits', 'information', 'requirement', 'responsibility'], 'string', 'max' => 2000],
         ];
@@ -66,6 +66,12 @@ class Job extends \yii\db\ActiveRecord
             'information' => 'Information',
             'requirement' => 'Requirement',
             'responsibility' => 'Responsibility',
+            'image_1' => 'Image 1',
+            'image_2' => 'Image 2',
+            'image_3' => 'Image 3',
+            'image_4' => 'Image 4',
+            'image_5' => 'Image 5',
+            'image_6' => 'Image 6',
         ];
     }
 }

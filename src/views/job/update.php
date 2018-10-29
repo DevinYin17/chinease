@@ -20,8 +20,8 @@ $this->params['breadcrumbs'][] = 'Update';
 <div class="job-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <input id="fileupload" type="file" name="files[]" multiple>
-    <div id="progress">
+    <input class="fileupload" data-id="job-pic" type="file" name="files[]" multiple>
+    <div id="progress-job-pic">
         <div class="bar" style="width: 0%;"></div>
     </div>
     <?= $this->render('_form', [

@@ -91,7 +91,29 @@
       <div class="info line"><?= $this->params['model']['requirement'] ?></div>
 
       <div class="label">Responsibility:</div>
-      <div class="info"><?= $this->params['model']['responsibility'] ?></div>
+      <div class="info line"><?= $this->params['model']['responsibility'] ?></div>
+
+      <div class="label">Detail:</div>
+      <div class="info detail-images">
+        <?php if ($this->params['model']['image_1']) {?>
+          <div class="detail-item" style="background-image: url(<?= $this->params['model']['image_1'] ?>)"></div>
+        <?php } ?>
+        <?php if ($this->params['model']['image_2']) {?>
+          <div class="detail-item" style="background-image: url(<?= $this->params['model']['image_2'] ?>)"></div>
+        <?php } ?>
+        <?php if ($this->params['model']['image_3']) {?>
+          <div class="detail-item" style="background-image: url(<?= $this->params['model']['image_3'] ?>)"></div>
+        <?php } ?>
+        <?php if ($this->params['model']['image_4']) {?>
+          <div class="detail-item" style="background-image: url(<?= $this->params['model']['image_4'] ?>)"></div>
+        <?php } ?>
+        <?php if ($this->params['model']['image_5']) {?>
+          <div class="detail-item" style="background-image: url(<?= $this->params['model']['image_5'] ?>)"></div>
+        <?php } ?>
+        <?php if ($this->params['model']['image_6']) {?>
+          <div class="detail-item" style="background-image: url(<?= $this->params['model']['image_6'] ?>)"></div>
+        <?php } ?>
+      </div>
 
       <a class="btn to-apply" href="javascript:void(0);" >Apply now!</a>
 
