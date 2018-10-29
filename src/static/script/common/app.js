@@ -294,8 +294,12 @@ $(function() {
   function initJobSearch() {
     if ($('.job-search') && $('.job-search').length) {
       $('.job-search').on('click', function() {
+        var keyword = $(this).parent().find('.job-keyword');
         var category = $(this).parent().find('.job-category');
         var location = $(this).parent().find('.job-location');
+        if (keyword && keyword.length) {
+          keyword = keyword.val().trim()
+        }
         if (category && category.length) {
           category = category.val().trim()
         }
@@ -304,7 +308,10 @@ $(function() {
         }
 
         setTimeout(function() {
-          if (category && category.length) {
+          if (keyword && keyword.length) {
+            window.open('/site/job?key=keyword&value=' + keyword, '_self');
+            // location.href = '/site/job?key=category&value=' + category;
+          } else if (category && category.length) {
             window.open('/site/job?key=category&value=' + category, '_self');
             // location.href = '/site/job?key=category&value=' + category;
           } else if (location && location.length) {
@@ -321,7 +328,8 @@ $(function() {
     if ($('.job-wrapper') && $('.job-wrapper').length) {
       var type = {
         category: 'Category',
-        base_location: 'City'
+        base_location: 'City',
+        keyword: 'Keywords',
       }
       $('.job-wrapper h2').html(type[getQueryString('key')] + ': ' + (getQueryString('value') || 'all'));
       if ((getQueryString('value') || '').toLowerCase().indexOf('current') > -1) {

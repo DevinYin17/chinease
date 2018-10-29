@@ -136,7 +136,11 @@ class SiteController extends Controller
     {
         $condition = [];
         if (!empty($key) && !empty($value)) {
-          $condition = ['like', $key, $value];
+          if ($key === 'keyword') {
+            $condition = ['or', ['like', 'title', $value], ['like', 'category', $value], ['like', 'base_title', $value], ['like', 'base_type', $value], ['like', 'base_group', $value], ['like', 'base_location', $value], ['like', 'benefits', $value], ['like', 'information', $value], ['like', 'requirement', $value], ['like', 'responsibility', $value]];
+          } else {
+            $condition = ['like', $key, $value];
+          }
         }
         $model = Job::find()->where($condition)->orderBy('id DESC')->all();
 

@@ -3,7 +3,7 @@
     <h2>Ease your way to teach in China</h2>
     <h3>Find and apply to your dream job in China</h3>
     <h3>through our free personalised application service</h3>
-    <input class="job-category" />
+    <input class="job-keyword" />
     <span class="job-search">Search Job</span>
   </section>
 
