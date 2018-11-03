@@ -8,8 +8,8 @@
   </section>
 
   <section class="section page-6 text-center">
-    <h2>Schools we cooperated with</h2>
-    <h3>Ease your way to teach in China</h3>
+    <h2>Our Partnerships</h2>
+    <h3>We provide English teaching positions across China</h3>
 
     <div class="container">
       <div class="swiper-container schools">
@@ -95,7 +95,7 @@
     <h2>Are you an English language teacher?</h2>
     <h3>Then why not come to CHINA?</h3>
     <div class="type-list container">
-      <a class="type-item" href="/site/job?key=category&value=Current Vacancy">Current Vacancy</a>
+      <a class="type-item" href="/site/job?key=category&value=Current Vancancies">Current Vancancies</a>
       <a class="type-item" href="/site/job?key=category&value=Graduate Scheme">Graduate Scheme</a>
       <a class="type-item" href="/site/job?key=category&value=Internship">Internship</a>
     </div>
@@ -184,35 +184,35 @@
       <a href="/site/applicationprocess#1">
         <div class="step-item">
           <span class="index">1</span>
-          Talk to Us and Check Your Eligibility
+          Talk to CHINEASE LTD and check your eligibility
         </div>
       </a>
 
       <a href="/site/applicationprocess#2">
         <div class="step-item">
           <span class="index">2</span>
-          Apply your favorite Position then take the initial video interview
+          Take an initial video interview with us, then we will help you to match up a suitable position based on your preference
         </div>
       </a>
 
       <a href="/site/applicationprocess#3">
         <div class="step-item">
           <span class="index">3</span>
-          Receiving an Offer after Passing the Interview
+          Have a second interview with the school in China to receive your dream offer
         </div>
       </a>
 
       <a href="/site/applicationprocess#4">
         <div class="step-item">
           <span class="index">4</span>
-          Visa Check and documents preparation
+          Apply for your Visa to China with the support of CHINEASE LTD
         </div>
       </a>
 
       <a href="/site/applicationprocess#5">
         <div class="step-item">
           <span class="index">5</span>
-          Welcome to China! Induction Week
+          Welcome to China! The new advaenture is waiting for you
         </div>
       </a>
     </div>
@@ -221,10 +221,8 @@
   <section class="section page-five">
     <h2>Contact Us</h2>
     <h3>
-      Get in touch to learn more about how our career experts can help you. Whatever it is you need, we’re here for you. Please feel</br>
-      free to contact info@chinease.co.uk<br/>
-      OR<br/>
-      Just fill in the form below. <br/>
+      Please fill in the online form below to get in touch with us and we will respond to your enquiry as soon as possible.<br/>
+      Alternatively, you can apply the position you are interested in now and one of our recruiters will be in touch to assist you with any questions you may have.<br/>
     </h3>
     <div class="container">
       <div id="map" class="map"></div>

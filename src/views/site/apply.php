@@ -5,8 +5,8 @@
       <div class="dropdown cus-input">
         Type
         <ul class="dropdown-list">
-          <a href="/site/job?key=category&value=Current Vacancy">
-            <li class="dropdown-item">Current Vacancy</li>
+          <a href="/site/job?key=category&value=Current Vancancies">
+            <li class="dropdown-item">Current Vancancies</li>
           </a>
           <a href="/site/job?key=category&value=Graduate Scheme">
             <li class="dropdown-item">Graduate Scheme</li>

@@ -158,6 +158,12 @@ class SiteController extends Controller
         $jobCategory = Job::find()->where(['category' => $category])->orderBy('id DESC')->limit(6)->all();
         // var_dump($jobAll);die;
 
+        $all = Job::find()->count();
+        $beijing = Job::find()->where(['like', 'base_location', 'beijing'])->count();
+        $shanghai = Job::find()->where(['like', 'base_location', 'shanghai'])->count();
+        $jiangsu = Job::find()->where(['like', 'base_location', 'jiangsu'])->count();
+        $others = $all - $beijing - $shanghai - $jiangsu;
+
         $jobs =[];
         foreach ($jobCategory as $jobC) {
             if ($jobC['id'] !== $model['id']) {
@@ -172,7 +178,12 @@ class SiteController extends Controller
         // }
         return $this->renderPage('jobdetail', '','','','',[
             'model' => $model,
-            'jobs' => array_slice($jobs, 0, 5)
+            'jobs' => array_slice($jobs, 0, 5),
+            'all' => $all,
+            'beijing' => $beijing,
+            'shanghai' => $shanghai,
+            'jiangsu' => $jiangsu,
+            'others' => $others,
         ]);
     }
 

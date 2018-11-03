@@ -48,11 +48,11 @@ use app\assets\AppAsset;
                         <a href="/">Home</a>
                     </li>
                     <li class="menu-item sub-menu <?php if (Yii::$app->request->getPathInfo() == 'site/jobvacancy') { echo 'active'; } ?>">
-                        <a href="/site/jobvacancy">Job Vacancy</a>
+                        <a href="/site/jobvacancy">Job Vancancies</a>
 
                         <ul class="sub-menu-list">
                             <li class="sub-menu-item">
-                                <a href="/site/job?key=category&value=Current Vacancy">Current Vacancy</a>
+                                <a href="/site/job?key=category&value=Current Vancancies">Current Vancancies</a>
                             </li>
                             <li class="sub-menu-item">
                                 <a href="/site/job?key=category&value=Graduate Scheme">Graduate Scheme</a>

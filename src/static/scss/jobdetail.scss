@@ -135,4 +135,19 @@
     background-size: cover;
     background-position: center;
   }
+
+  .wechat-qrcode {
+    width: 280px;
+    height: 310px;
+    margin: 10px auto;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 280px;
+    box-sizing: border-box;
+    text-align: center;
+    background-image: url('/build/images/common/wechat_qrcode.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
 }

@@ -91,7 +91,7 @@
 
   <ul class="session">
     <li class="left">
-      May I apply the job vacancy when I have no working experience and bachelor degree?
+      May I apply the job vancancies when I have no working experience and bachelor degree?
     </li>
     <li class="right">
       It’s fine! Definitely fine. There are other internships for you and you can still start amazing adventures in China!
@@ -121,7 +121,7 @@ CHINEASE LTD is specialized in providing English teaching positions in China. Al
       We work with universities, public schools, international schools, kindergartens, and training school in lots of cities. We cooperate with all types of schools and provide varies of positions, such as manager level role, English teacher or subjects’ teacher. And the schools are located in Shanghai, Beijing, Shenzhen, Xi’an, Suzhou, Wuxi, Nanjing……<br/>
       Therefore, no matter what types of schools you prefer to teach, which city you want to live in, CHINEASE LTD can help you to match your dream position base on your preference.<br/>
       Please follow the link to see what positions we have now:<br/>
-      <a href="http://www.chinease.co.uk/site/job?key=category&value=Current%20Vacancy">http://www.chinease.co.uk/site/job?key=category&value=Current%20Vacancy</a>
+      <a href="http://www.chinease.co.uk/site/job?key=category&value=Current%20Vancancies">http://www.chinease.co.uk/site/job?key=category&value=Current%20Vancancies</a>
     </li>
 
     <li class="left">

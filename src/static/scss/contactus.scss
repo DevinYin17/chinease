@@ -4,15 +4,65 @@
   .banner {
     width: 100%;
     height: 400px;
-    background-size: auto 500px;
-    background-position: center;
+    background-size: auto 600px;
+    background-position: center -50px;
     background-image: url('/build/images/contactus/banner_2.png');
-    background-color: #fff;
+    // background-color: #fff;
     background-repeat: no-repeat;
   }
 
   .container {
     padding: 100px 0;
+
+    &.without-top {
+      padding-top: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .map {
+        flex: 1;
+        height: 430px;
+      }
+
+      .contact {
+        flex: 1;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 30px;
+
+        label {
+          display: inline-block;
+          width: 180px;
+          font-size: 24px;
+          line-height: 38px;
+          padding-right: 10px;
+          text-align: right;
+        }
+
+        .form-control {
+          vertical-align: top;
+          width: 366px;
+          border: 0;
+          padding: 0 15px;
+          font-size: 24px;
+          line-height: 38px;
+          background-color: #024777;
+          color: #eefdff;
+        }
+      }
+
+      .btn {
+        display: inline-block;
+        color: #fff;
+        font-size: 16px;
+        background-color: $light;
+        padding: 10px 30px;
+        cursor: pointer;
+      }
+    }
   }
 
   .icon-list {
@@ -71,11 +121,6 @@
       line-height: 24px;
       font-weight: normal;
     }
-  }
-
-  .map {
-    width: 100%;
-    height: 430px;
   }
 
   .page-two {

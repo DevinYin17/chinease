@@ -4,8 +4,8 @@
       <div class="dropdown cus-input">
         Type
         <ul class="dropdown-list">
-          <a href="/site/job?key=category&value=Current Vacancy">
-            <li class="dropdown-item">Current Vacancy</li>
+          <a href="/site/job?key=category&value=Current Vancancies">
+            <li class="dropdown-item">Current Vancancies</li>
           </a>
           <a href="/site/job?key=category&value=Graduate Scheme">
             <li class="dropdown-item">Graduate Scheme</li>
@@ -52,14 +52,14 @@
   </div>
 
   <ul class="type-list container">
-    <a class="type-item" href="/site/job?key=category&value=Current Vacancy">Current Vacancy</a>
+    <a class="type-item" href="/site/job?key=category&value=Current Vancancies">Current Vancancies</a>
     <a class="type-item" href="/site/job?key=category&value=Graduate Scheme">Graduate Scheme</a>
     <a class="type-item" href="/site/job?key=category&value=Internship">Internship</a>
   </ul>
 
   <div class="job-container">
     <div class="container">
-      <h2>Current Vacancy</h2>
+      <h2>Current Vancancies</h2>
       <div class="header-tip">
         <span class="text">We are right here looking forward to help the first step of your adventure to China!</span>
 

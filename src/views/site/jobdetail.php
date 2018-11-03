@@ -5,8 +5,8 @@
       <div class="dropdown cus-input">
         Type
         <ul class="dropdown-list">
-          <a href="/site/job?key=category&value=Current Vacancy">
-            <li class="dropdown-item">Current Vacancy</li>
+          <a href="/site/job?key=category&value=Current Vancancies">
+            <li class="dropdown-item">Current Vancancies</li>
           </a>
           <a href="/site/job?key=category&value=Graduate Scheme">
             <li class="dropdown-item">Graduate Scheme</li>
@@ -25,27 +25,27 @@
     <ul class="count-list container">
       <li class="count-item">
         Jobs
-        <span class="number">198</span>
+        <span class="number"><?= $this->params['all'] ?></span>
       </li>
 
       <li class="count-item">
         Beijing
-        <span class="number">65</span>
+        <span class="number"><?= $this->params['beijing'] ?></span>
       </li>
 
       <li class="count-item">
         Shanghai
-        <span class="number">90</span>
+        <span class="number"><?= $this->params['shanghai'] ?></span>
       </li>
 
       <li class="count-item">
         Jiangsu
-        <span class="number">78</span>
+        <span class="number"><?= $this->params['jiangsu'] ?></span>
       </li>
 
       <li class="count-item">
-        others
-        <span class="number">198</span>
+        Others
+        <span class="number"><?= $this->params['others'] ?></span>
       </li>
     </ul>
   </div>
@@ -93,7 +93,9 @@
       <div class="label">Responsibility:</div>
       <div class="info line"><?= $this->params['model']['responsibility'] ?></div>
 
-      <div class="label">Detail:</div>
+      <?php if ($this->params['model']['image_1']) {?>
+        <div class="label">Detail:</div>
+      <?php } ?>
       <div class="info detail-images">
         <?php if ($this->params['model']['image_1']) {?>
           <div class="detail-item" style="background-image: url(<?= $this->params['model']['image_1'] ?>)"></div>
@@ -120,7 +122,7 @@
     </div>
 
     <div class="right">
-      <div class="label">Similar jobs</div>
+      <div class="label">Similar Jobs</div>
       <?php foreach ($this->params['jobs'] as $job) {
         ?>
         <a href="/site/jobdetail?id=<?= $job['id']?>">
@@ -133,21 +135,23 @@
           <?php
       } ?>
 
-      <div class="label">categories</div>
-      <a href="/site/job?key=category&value=Current Vacancy"><div class="info center">Current Vacancy</div></a>
+      <!-- <div class="label">categories</div>
+      <a href="/site/job?key=category&value=Current Vancancies"><div class="info center">Current Vancancies</div></a>
       <a href="/site/job?key=category&value=Graduate Scheme"><div class="info center">Graduate Scheme</div></a>
-      <a href="/site/job?key=category&value=Internship"><div class="info center line">Internship</div></a>
+      <a href="/site/job?key=category&value=Internship"><div class="info center line">Internship</div></a> -->
 
-      <div class="label">location</div>
+      <div class="label">Location</div>
       <a href="/site/job?key=base_location&value=Beijing"><div class="info center title">Beijing</div></a>
       <a href="/site/job?key=base_location&value=Shanghai"><div class="info center title">Shanghai</div></a>
       <a href="/site/job?key=base_location&value=Jiangsu"><div class="info center title">Jiangsu</div></a>
-      <a href="/site/job?key=base_location&value="><div class="info center title line">other</div></a>
+      <a href="/site/job?key=base_location&value="><div class="info center title line">Other</div></a>
 
-      <div class="label">contact ways</div>
+      <div class="label">Contact Us</div>
       <div class="info center">
         Email:<a href="mailto:hello_chinease@outlook.com">hello_chinease@outlook.com</a>
       </div>
+
+      <div class="wechat-qrcode">WeChat</div>
     </div>
   </div>
 </div>
